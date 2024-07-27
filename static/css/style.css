@@ -1,0 +1,378 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+
+a {
+    text-decoration: none;
+    color: inherit;
+    display: block;
+}
+
+.img {
+    width: 100%;
+}
+
+.block {
+    display: block;
+}
+
+.nav_flex {
+    display: flex;
+}
+
+ul {
+    list-style: none;
+}
+
+
+/* .header_flex {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+}
+
+header {
+    width: 150px;
+    width: 100%;
+    background-color: #4682b4;
+}
+
+header .search {
+    width: 500px;
+    height: 25px;
+    border-radius: 50px;
+}
+
+header .search_button {
+    width: 50px;
+} */
+
+/* .button_div {
+    height: 30px;
+    line-height: 50px;
+}
+
+.header_img {
+    width: 100px;
+    height: 100px;
+}
+
+
+.search_div {
+    line-height: 100px;
+}
+
+.acount {
+    width: 150px;
+    height: 50px;
+}
+
+header nav {
+    height: 50px;
+}
+
+
+header nav ul {
+    justify-content: space-around;
+    list-style: none;
+    text-align: center;
+    display: flex;
+}
+
+header nav ul a {
+    display: block;
+    width: 25%;
+    line-height: 50px;
+    border: #FFFF solid 1px;
+} */
+
+
+/* header .header_flex {
+    display: flex;
+    justify-content: space-around;
+}
+
+.header_img {
+    
+}
+
+
+.header_flex .nav_flex {
+    justify-content: space-aroundd;
+} */
+
+header {
+    height: 15vh;
+}
+
+
+.header_img {
+    line-height: 15vh;
+    width: 20vw;
+}
+
+
+
+.header_flex {
+    display: flex;
+    justify-content: space-around;
+}
+
+.search_div {
+    line-height: 15vh;
+    text-align: center;
+}
+
+.search {
+    width: 30vw;
+    height: 3vh;
+    border-radius: 15vw;
+
+}
+
+header nav ul {
+    list-style: none;
+    display: flex;
+    /* padding: 4vh 0; */
+    width: 20vw;
+    justify-content: space-around;
+}
+
+header nav ul li {
+    padding: 5vh 0;
+    line-height: 5vh;
+
+}
+
+header nav ul li:hover {
+    border-bottom: 1px solid;
+}
+
+
+
+
+
+.bread {
+    height: 5vh;
+    background-color: #000;
+}
+
+
+.slider1 img {
+    opacity: 0.8;
+    transition: 0.6s;
+}
+
+.slider1 img:hover {
+    opacity: 1;
+    
+}
+
+
+.nav_flex div {
+    line-height: 16vh;
+}
+
+
+.fontawsame {
+    display: block;
+    font-size: 4vh;
+    text-align: center;
+    width: 6vh;
+    height: 5vh;
+    padding-top: 1vh;
+    cursor: pointer;
+    border: 3px solid;
+    border-radius: 2vw;
+    transition: 0.6s;
+}
+
+
+.fontawsame:hover {
+    opacity: 0.8;
+    transform: scale(1.2, 1.2);
+}
+
+
+
+
+
+
+.one {
+    width: 100%;
+    margin: 0 auto;
+    /* padding-bottom: 5vh; */
+    background-color: #000;
+}
+
+
+.menu, .menu2 {
+    display: flex;
+    width: 50vw;
+    margin: 0 auto;
+    justify-content: space-around;
+    padding: 30px 0;
+}
+
+.menu2 {
+    width: 70vw;
+}
+
+.top2, .bottom2 {
+    /* display: none; */
+    margin-top: -10vh;
+    transition: 0.8s;
+    opacity: 0;
+}
+
+
+
+.div_img {
+    width: 100%;
+    text-align: center;
+}
+
+.two {
+    text-align: center;
+    padding: 50px 0;
+    height: 60vh;
+}
+
+.q {
+    padding-bottom: 30px;
+}
+
+.two .menu .menu_title {
+    height: 30px;
+}
+
+.two h2 {
+    font-size: 30px;
+    font-family: cursive;
+}
+
+.or {
+    line-height: 300px;
+}
+
+.three {
+    /* margin-top: -40vh; */
+    transition: 0.8s;
+}
+
+.three .lay {
+    width: 100%;
+}
+
+/* .three .lay .product {
+    width: ;
+} */
+
+
+.slider2 .slick-slide {
+    height: 200px;
+    width: 100%;
+}
+
+
+.three .lay_s {
+    width: 80%;
+    margin: 0 auto;
+}
+
+.three .lay_s {
+    display: block;
+}
+
+.menu_solid {
+    cursor: pointer;
+    transition: 0.6s;
+    width: 15vw;
+}
+
+.menu_solid:hover {
+    transform: scale(1.2,1.2);
+}
+
+.menu_solid h2 {
+    font-size: 25px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+footer {
+    width: 100%;
+    height: 300px;
+    background-color: bisque;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+.slider1 {
+    background-color: black;
+    margin: 0 auto;
+    width: 95vw;
+    height: 80vh;
+}
+
+
+/* slick */
+.slider1 .slick-slide {
+    height: 75vh;
+    
+}
+
+/* 出現 */
+.active {
+    /* display: block; */
+    margin-top: 0;
+    opacity: 1;
+    /* transition: 1s; */
+}
+
+
+
+.account_detail {
+    z-index: 10;
+    position: fixed;
+    left: 70vw;
+    background-color: white;
+    width: 30vw;
+    height: 20vh;
+    top: 17vh;
+}
+
+.account_detail nav {
+    width: 25vw;
+    margin: 0 auto;
+    height: 16vh;
+    padding-top: 2vh;
+}
+
+.account_detail nav ul {
+    
+}
