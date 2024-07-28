@@ -1,0 +1,666 @@
+article {
+
+    padding-top: 24vh;
+}
+
+.first {
+    display: block;
+}
+
+.address {
+    display: none;
+}
+
+.return {
+    width: 5vw;
+    margin-left: 5vw;
+    font-size: 5vmin;
+}
+.return a {
+    display: inline;
+}
+
+section {
+    width: 90%;
+    /* padding-top: 5vh; */
+    display: flex;
+    padding-bottom: 5vh;
+    margin: 0 auto;
+}
+
+.favorite_star {
+    text-align: center;
+    /* background-color: aqua; */
+    /* padding-top: 2vh; */
+    padding-bottom: 1vh;
+}
+
+.favorite_star form button {
+    width: 50px;
+    height: 50px;
+    border: solid 3px #a9a9a9;
+    background-color: #ffff;
+    font-size: 30px;
+    display: block;
+    margin-left: 85vw;
+    border-radius: 25px;
+    color: pink;
+}
+
+section .left {
+    width: 50%;
+    /* margin: 0 5%; */
+}
+
+section .clothes_img {
+    border: 1px solid;
+    height: 90vh;
+    width: 90%;
+    margin: 0 5%;
+}
+
+section .clothes_img img {
+    height: 100%;
+    display: block;
+    max-width: 100%;
+    margin: 0 auto;
+    
+}
+
+
+section .left .review {
+    width: 100%;
+}
+
+
+
+
+
+
+
+section .clothes_text {
+    /* height: 100vh; */
+    width: 40%;
+    margin: 0 5%;
+}
+
+
+section .clothes_title {
+    font-size: 25px;
+    /* max-height: 20vh; */
+    border-bottom: 1px solid;
+    
+}
+
+section .clothes_text .priceAndMore {
+    /* border-top: 1px solid; */
+    display: flex;
+    width: 90%;
+    margin: 0 auto;
+    height: 5vh;
+    padding-top: 1vh;
+}
+
+section .clothes_text .priceAndMore .price {
+    height: 5vh;
+    width: 40%;
+    text-align: center;
+
+}
+
+section .clothes_text .priceAndMore .price h4 {
+    height: 100%;
+    line-height: 5vh;
+}
+
+section .clothes_text .priceAndMore .price h4 span {
+    font-size: 22px;
+    color: red;
+}
+
+section .review {
+    /* background-color: yellow; */
+    display: flex;
+    width: 60%;
+}
+
+section .reviewStar {
+    display: flex;
+    width: 45%;
+}
+
+section .reviewStar div {
+    position: relative;
+    width: 20%;
+}
+
+/* section .reviewStar i {
+    width: 100%;
+    font-size: 25px;
+} */
+
+
+section .reviewStar .base {
+    color: gray;
+    width: 80%;
+    font-size: 25px;
+}
+
+
+section .reviewStar .star1 .change, section .review .star2 .change, section .review .star3 .change, section .review .star4 .change, section .review .star5 .change  {
+    -webkit-background-clip: text; /*//テキストでくり抜く*/
+    -webkit-text-fill-color: transparent; /*/くり抜いた部分は背景を表示*/
+    /* background: linear-gradient(to right, red 30%, green 30%); */
+    background-color: yellow;
+    font-size: 25px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    z-index: 1;
+}
+
+
+
+section .clothes_text .reviewNum {
+    width: 10%;
+    line-height: 5vh;
+}
+
+section .clothes_text .reviewList {
+    width: 40%;
+    line-height: 5vh;
+
+}
+
+
+.clothes_detail {
+    width:  100%;
+    text-align: center;
+    padding-top: 2vh;
+}
+
+
+.material {
+    padding: 1vh 0;
+    height: 5vh;
+    /* border-top: #d3d3d3 1px solid; */
+}
+
+.material p {
+    font-size: 2.5vmin;
+}
+
+
+.clothes_size {
+    width: 80%;
+    margin: 0 auto;
+    
+}
+
+.size_cen {
+    height: 15vh;
+    padding: 1vh 0;
+    line-height: calc(15vh / 3);
+}
+
+.size_cen p {
+    font-size: 2.5vmin;
+
+}
+
+.size_select {
+    display: flex;
+    justify-content: space-around;
+    padding-top: 2vh;
+    position: relative;
+
+}
+
+.clothes_size h3 {
+    font-size: 20px;
+}
+
+
+.size_select div {
+    width: 25%;
+    cursor: pointer;
+    margin: 0 auto;
+    
+    
+}
+
+.size_select .size_select_content input[type="radio"] {
+    display: none; /* ラジオボタンを非表示にする */
+}
+
+.size_select .size_select_content label {
+    width: 100%;
+    height: 100%;
+    display: block;
+    border-radius: 100px;
+    border: 1px solid #000;
+    background-color: #ffff;
+    color: #000;
+    transition: 0.4s;
+    cursor: pointer; /* マウスオーバー時にカーソルをポインターに変更 */
+}
+
+.size_select .size_select_content label:hover {
+    background-color: pink;
+    color: #000;
+}
+
+.size_select .size_select_content input[type="radio"]:checked + label {
+    background-color: pink; /* チェックされたラジオボタンに適用するスタイル */
+}
+
+
+
+.count {
+    padding-top: 3vh;
+    height: 5vh;
+    line-height: 5vh;
+    font-size: 2.5vmin;
+}
+
+.count select {
+    width: 3vw;
+    font-size: 2vmin;
+}
+
+.color {
+    
+}
+
+.color h3 {
+    text-align: center;
+    line-height: 5vh;
+    height: 5vh;
+}
+
+.color_list {
+    width: 100%;
+    /* justify-content: space-around; */
+    display: flex;
+    
+}
+
+
+
+
+
+.color_list div {
+    width: 12.1%;
+    border: #000 1px solid;
+    transition: 0.4s;
+    margin-right:  0.08%;
+}
+
+.color_list div:nth-child(1) {
+    
+    border: orange 1px solid;
+    
+}
+
+
+.color_list div:hover {
+    border: orange 1px solid;
+}
+
+
+
+.color_list div img {
+    max-width: 100%;
+    display: block;
+    height: 13vh;
+    margin: 0 auto;
+    object-fit: cover;
+    background-color: #000;
+}
+
+.color_list .color_img input[type="radio"] {
+    display: none; /* ラジオボタンを非表示にする */
+}
+
+.color_list .color_img input[type="radio"]:checked + label {
+    /* background-color: pink; チェックされたラジオボタンに適用するスタイル */
+    background-color: pink;
+}
+
+.buttons {
+    padding-top: 7vh;
+    width: 80%;
+    display: flex;
+    margin: 0 auto;
+    height: 7vh;
+}
+
+
+.buttons div {
+    width: 40%;
+    margin: 0 auto;
+    height: 100%;
+}
+
+.buttons div  {
+    width: 100%;
+    height: 100%;
+}
+
+.buttons div  button {
+    display: block;
+    width: 90%;
+    height: 100%;
+    background-color: #FFFF;
+    color: #000;
+    border: #000 solid 2px;
+    transition: 0.6s;
+    font-size: 25px;
+    cursor: pointer;
+}
+
+.buttons div form button:hover {
+    background-color: #000;
+    border-radius: 50px;
+    color: #ffff;
+}
+
+.descriptionText {
+    padding: 5vh 0;
+    width: 90%;
+    margin: 0 auto;
+}
+
+.descriptionText h2 {
+    font-size: 2.5vmin;
+    text-align: center;
+    height: 5vh;
+    line-height: 5vh;
+}
+
+.descriptionText p {
+    font-size: 2.5vmin;
+}
+
+
+
+.descriptionAndReview {
+    width: 100%;
+    background-color: #f5f5f5;
+    padding-top: 5vh;
+}
+
+.descriptionAndReview .descriptionText{
+    width: 60%;
+    margin: 0 5%;
+}
+
+.descriptionAndReview .descriptionText h2{
+    text-align: center;
+}
+
+.descriptionAndReview .descriptionText p {
+    font-size: 2.5vmin;
+    line-height: 4vh;
+}
+
+.customerReview {
+    width: 30%;
+    border-left:  1px solid ;
+    padding: 5vh 0;
+}
+
+.customerReview form {
+    width: 50%;
+    margin: 0 auto;
+}
+
+.customerReview form label {
+    font-size: 4vmin;
+    text-align: center;
+    cursor: pointer;
+}
+
+.customerReview .star_label {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    color: gray;
+    margin: 5vh 0;
+    height: 5vh;
+    line-height: 5vh;
+}
+
+.customerReview form button {
+    display: block;
+    width: 100%;
+    background-color: #ffff;
+    height: 5vh;
+    cursor: pointer;
+}
+
+
+.customerReview input[type="radio"] {
+    display: none;
+}
+
+
+.customerReview h2 {
+    text-align: center;
+    font-size: 3vmin;
+}
+
+.customerReview .starSelect {
+    width: 40%;
+    margin: 0 auto;
+    display: flex;
+}
+
+.customerReview .starSelect div {
+    width: 14%;
+    margin: 0 3%;
+    position: relative;
+}
+
+.customerReview .starSelect h3 {
+    width: 100%;
+    /* text-align: center; */
+    font-size: 37px;
+    color:  yellow;
+    position: absolute;
+}
+
+.customerReview .starSelect h3 i {
+    width: 100%;
+}
+
+.customerReview .starSelect .change {
+    -webkit-background-clip: text; /*//テキストでくり抜く*/
+    -webkit-text-fill-color: transparent; /*/くり抜いた部分は背景を表示*/
+    /* text-align: center; */
+    background-color: yellow;
+    width: 50%;
+    /* top: 0;
+    left: 0; */
+}
+
+
+
+.stock_alert {
+    color: #dc143c;
+}
+
+.address_check_back {
+    background-color: #a9a9a9;
+
+}
+
+.address h1 {
+    margin-left: 5vw;
+}
+
+.address .last_check{
+    display: flex;
+    width: 88%;
+    height: 30vh;
+    margin: 0 auto;
+    justify-content: space-around;
+    padding: 1%;
+    border: #a9a9a9 solid 1px;
+}
+
+.address .last_check .last_check_img_div {
+    height: 100%;
+    width: 20%;
+}
+
+.address .last_check .last_check_img_div img {
+    height: 100%;
+    display: block;
+    max-width: 100%;
+    margin: 0 auto;
+}
+
+.address .last_check .last_check_detail {
+    width: 70%;
+    height: 100%;
+}
+
+.address_check_div {
+    display: flex;
+    justify-content: space-between;
+    width: 40vw;
+    margin: 0 auto 3vh;
+    height: 5vh;
+    line-height: 5vh;
+
+}
+
+.address_check_div div {
+    width: 40%;
+    display: flex;
+
+}
+
+.address_check_div div input {
+    width: 5%;
+}
+
+.address_check_div div label {
+    width: 95%;
+}
+
+.address .h-adr {
+    width: 40vw;
+    margin: 2vh auto 2vh;
+    display: none;
+    text-align: center;
+    transition: 0.4s;
+    height: 30vh;
+}
+
+.address .h-adr p {
+    width: 100%;
+    height: 3vh;
+    margin-bottom: 2vh;
+    line-height: 3vh;
+}
+
+.address .h-adr input{
+    width: 50%;
+    height: 3vh;
+}
+
+.buy_button {
+    height: 10vh;
+    line-height: 10vh;
+}
+
+.buy {
+    display: block;
+    width: 15vw;
+    margin: 0 auto ;
+    background-color: #FFFF;
+    border: #000 solid 2px;
+    height: 7vh;
+    transition: 0.4s;
+
+}
+
+.buy:hover, .buy_process:hover , .kart:hover {
+    background-color: #000;
+    color: #FFFF;
+    border: #FFFF solid 1px;
+    border-radius: 50px;
+}
+
+.other-product {
+    width: 100%;
+    height: 30vh;
+    display: block;
+    margin: 10vh auto;
+}
+
+.other-product h3 {
+    text-align: center;
+}
+
+.other-product .slider9, .other-product .slider10 {
+    width: 90%;
+    height: 100%;
+    margin: 0 auto;
+}
+
+.other-product form {
+    width: 100%;
+    height: 100%;
+}
+
+.other-product .slider9 div ,.other-product .slider10 div {
+    width: 100%;
+    height: 100%;
+    filter: brightness(1);
+}
+
+.other-product .slider9 div img , .other-product .slider10 div img {
+    max-width: 100%;
+    height: 100%;
+    display: block;
+    margin: 0 auto;
+}
+
+.slick-prev {
+    left: -40px!important;
+}
+
+.slick-prev:before, .slick-next:before {
+    /* font-family: "Font Awesome 5 Free"; */
+    color: #000!important;
+    font-size: 5vmin!important;
+    /* content: "\f105"!important; */
+    line-height: 0!important;
+}
+
+.other-product .submit {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    opacity: 0;
+    /* ボタンタフの設定を消していく */
+    /* background-color: transparent; */
+    background-color: #000;
+    border: none; 
+    cursor: pointer;
+    padding: 0;
+    outline: none;
+    appearance: none;
+    z-index: 20;
+    transition: 0.4s;
+}
+
+.other-product .submit:hover {
+    opacity: 0.4;
+}

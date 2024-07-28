@@ -1,0 +1,104 @@
+.hujitajosei {
+    background: url(./../../images/huzita/black_00012.jpg);
+    padding-bottom: 250px;
+}
+
+.form-top {
+    position: relative;
+    top: 200px;
+}
+
+*{box-sizing: border-box;}
+
+.form_style {
+    background-image: url(./../../images/huzita/white_00012.jpg);
+	width: 800px;
+	padding: 20px;
+	margin: 100px auto;
+	border:#525f66 solid 1px;
+    border-radius: 3%;
+}
+
+h1 {
+    font-size: 30px;
+    text-align: center;
+}
+
+.form_style dl {
+    width: 100%;
+	padding: 20px 0;
+	margin: 0;
+	display: flex;
+	flex-wrap: wrap;
+}
+
+.form_style dl dt {
+    width: 25%;
+}
+
+.form_style dl dd{
+    width: 75%;
+}
+
+.form_style dt,.form_style dd{
+    padding: 10px 10px 20px 10px;
+}
+
+label{
+    display: block;
+}
+
+input[type="text"],input[type="email"],input[type="url"],input[type="tel"],textarea {
+	width: 100%;
+	padding: 10px;
+	color: #444444;
+	border: solid 1px #cccccc;
+	outline: none;
+	transition: ease 0.3s;
+	border-radius: 5px
+}
+
+input[type="radio"],input[type="checkbox"]{
+    margin-right: 10px;
+}
+
+input:focus, textarea:focus{
+	box-shadow: 0 0 7px #528fcc;
+	border: 1px solid #528fcc;
+	background-color: #bdbcf0;
+}
+
+textarea {
+    resize: none;
+}
+
+select {
+	padding: 0px;
+	color: #444444;
+	border: solid 1px #cccccc;
+	border-radius: 3px;
+	font-size:14px;
+}
+
+::placeholder{
+    font-size: 14px;
+}
+
+input[type="submit"] {
+    background-color: #ffff;
+    color: #000;
+    font-size: 1em;
+	padding:20px 50px;
+	display: block;
+	margin: 0 auto;
+	border-radius : 10px;
+	cursor: pointer;
+    transition: 0.6s;
+    border: 1px solid #000;
+}
+
+input[type="submit"]:hover {
+    background-color: #000;
+    color: #ffff;
+    border-radius: 50px;
+}

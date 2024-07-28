@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="static/css/common.css">
+    <link rel="stylesheet" href="static/css/login.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <title>Document</title>
+</head>
+<body>
+    <!-- <header>
+        <div class="header_flex">
+            <div class="header_img">
+                <img src="./../static/images/ダウンロード.jpg" alt="" class="img">
+            </div>
+            <div>
+                <form class="search_div" action="/result" method="get">
+                    <input type="text" class="search" class="block" name="search">
+                    <input type="submit" class="search_button" class="block">
+                </form>
+                <div class="button_div">
+                    
+                </div>
+            </div>
+            <nav>
+                <ul class="nav_flex">
+                    <div class="account">
+                        <i class="fas fa-user fontawsame"></i>
+                    </div>
+                    <li><a href="/" class="h">HOME</a></li>
+                    <li><a a href="/clothesList" class="h">clothes</a></li>
+                    <li><a href="" class="h">pickup</a></li>
+                    <li><a href="" class="h">other</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header> -->
+    <!-- <div class="account_detail">
+        <nav>
+            <ul>
+                <li>{{ info | safe }}</li>
+                <li><form action="/login" name="account"><a href="javascript:account.submit()">{{ log | safe }}</a></form></li>
+                <li><a href="">カート</a></li>
+                <li><a href="">購入履歴</a></li>
+            </ul>
+            <ul>
+                <li class="name">{{ acount | safe }}</li>
+                <li></li>
+                <li></li>
+                <li></li>
+            </ul>
+        </nav>
+    </div>
+    <nav class="bread">
+        
+    </nav> -->
+    <article class="{{ miss }}">
+        <h1>アカウントにログイン</h1>
+        
+        <form action="/login" method="post">
+            <!-- メールアドレス -->
+            <h2>メールアドレスを入力してください</h2>
+            {{ error | safe }}
+            <input type="email" name="mail" class="text">
+            <!-- パスワード -->
+            <h2>パスワードを入力してください</h2>
+            {{ error | safe }}
+            <input type="password" name="pass" class="text">
+            <input type="submit" class="button">
+        </form>
+        <a href="/signup_mail"><button class="button">アカウントをお持ちでない方はこちら</button></a>
+        <a href="/pass_change"><button class="button">パスワードを忘れてしまった方はこちら</button></a>
+    </article>
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="static/js/script.js"></script>
+    {{ script | safe }}
+</body>
+</html>

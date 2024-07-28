@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <link rel="stylesheet" href="./../../static/css/common.css"> -->
+    <link rel="stylesheet" href="static/css/registration.css">
+    <link href="https://fonts.googleapis.com/css?family=Alegreya+Sans+SC:300" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css"
+        integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="icon" href="static/images/logo/logo_black.PNG">
+
+    <title>Document</title>
+</head>
+
+<body>
+
+    <div class="kuro">
+        <div class="line">
+            <button type="button" onclick="history.back()"><img src="static/images/logo/modoru1.png"
+                    alt="戻る画像"></button>
+        </div>
+
+        <h1>商品登録</h1>
+        <br>
+        <article>
+            <section class="contentsName">
+                <form action="/registration" method="post" enctype="multipart/form-data" id="regi">
+                    <ul>
+                        <li>
+                            <span class="required">商品名</span>
+                        </li>
+                        <li class="productName"><input type="text" name="productName"  required></li>
+                        <br>
+                        <li>商品説明</li>
+                        <li class="productDetail"><textarea name="productDetail" id="" cols="100" rows="10" required></textarea></li>
+                        <br>
+
+                        <li> <span class="required2">商品画像</span></li>
+                        <li class="file">
+                            <div>
+                                <input type="file" name="file1" required>
+                                <input type="file" name="file2">
+                                <input type="file" name="file3">
+                                <input type="file" name="file4">
+                            </div>
+                            <div>
+                                <input type="file" name="file5">
+                                <input type="file" name="file6">
+                                <input type="file" name="file7">
+                                <input type="file" name="file8">
+                            </div>
+                        </li>
+                        <br>
+                        <li> <span class="required3">値段</span></li>
+                        <li class="price"><input type="number" name="price" required   min="1" pattern="^[+-]?([1-9][0-9]*|0)$"></li>
+                        <br>
+                        <li>性別</li>
+                        <li class="gender">
+                            <input type="radio" name="gender" id="men" value="men" required>
+                            <label for="men">Men</label>
+
+                            <input type="radio" name="gender" id="woman" value="woman">
+                            <label for="woman">Woman</label>
+
+                            <input type="radio" name="gender" id="kids" value="kids">
+                            <label for="kids">kids</label>
+
+                            <input type="radio" name="gender" id="unisex" value="unisex">
+                            <label for="unisex">Unisex</label>
+                        </li>
+                        <br>
+                        <li>服のカテゴリー</li>
+                        <li class="clothes_type">
+                            <input type="radio" name="clothes_type" id="Jacket" value="jacket" required>
+                            <label for="Jacket">Jacket</label>
+                            <input type="radio" name="clothes_type" id="T-shirt" value="t-shirt">
+                            <label for="T-shirt">T-shirt</label>
+                            <input type="radio" name="clothes_type" id="Shirt" value="shirt">
+                            <label for="Shirt">Shirt</label>
+                            <input type="radio" name="clothes_type" id="Skirt" value="skirt">
+                            <label for="Skirt">Skirt</label>
+                            <input type="radio" name="clothes_type" id="Pants" value="pants">
+                            <label for="Pants">Pants</label>
+                            <input type="radio" name="clothes_type" id="Underwear" value="underwear">
+                            <label for="Underwear">Underwear</label>
+                        </li>
+                        <br>
+                        <li>サイズ(cm)</li>
+                        <li class="height">
+                            <div class="s">
+                                <p>S</p><input type="number" name="S" required>
+                            </div>
+                            <div class="m">
+                                <p>M</p><input type="number" name="M" required>
+                            </div>
+                            <div class="l">
+                                <p>L</p><input type="number" name="L" required>
+                            </div>
+                        </li>
+                        <br>
+                        <li>在庫数</li>
+                        <li class="stock">
+                            <input type="number" name="stock" required  min="1" pattern="^[+-]?([1-9][0-9]*|0)$">
+                        </li>
+                        <br>
+                        <li>材質</li>
+                        <li class="material">
+                            <input type="radio" name="material" id="chemical" value="化学繊維"  required>
+                            <label for="chemical">化学繊維</label>
+                            <input type="radio" name="material" id="wool" value="毛">
+                            <label for="wool">羊毛</label>
+                            <input type="radio" name="material" id="Silk" value="絹">
+                            <label for="Silk">絹</label>
+                            <input type="radio" name="material" id="cotton" value="綿">
+                            <label for="cotton">綿</label>
+                            <input type="radio" name="material" id="linen" value="麻">
+                            <label for="linen">麻</label>
+                        </li>
+
+                    </ul>
+                </form>
+            </section>
+
+
+        </article>
+        <br>
+        <button type="submit" form="regi">登録する</button>
+    </div>
+</body>
+{{ alert | safe }}
+</html>

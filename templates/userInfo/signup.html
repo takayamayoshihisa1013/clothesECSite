@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="static/css/signup.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Document</title>
+</head>
+<body>
+    
+    <article  class="first" >
+        <form action="/signup" method="post">
+            <h1>アカウント作成</h1>
+            <h2>あなたの名前を入力してください</h2>
+            <div class="flex">
+                <div class="name">
+                    <h3>苗字</h3>
+                    <input type="text" name="lastName" id="lastName" required>
+                </div>
+                <div class="name">
+                    <h3>名前</h3>
+                    <input type="text" name="firstName" id="firstName" required>
+                </div>
+            </div>
+            <h2>メールアドレスを入力してください</h2>
+            <h3 class="error">{{ emailError }}</h3>
+            <div class="input">
+                <input type="email" name="email" id="email">
+            </div>
+            <h2>パスワードを入力してください</h2>
+            <h3 class="error">{{ passError }}</h3>
+            <div class="input">
+                <input type="password" name="pass1" id="pass1" required>
+            </div>
+            <h2>確認のためもう一度パスワードを入力してください</h2>
+            <h3 class="error">{{ passError }}</h3>
+            <div class="input">
+                <input type="password" name="pass2" id="pass2" required>
+            </div>
+            <h2>自宅の住所</h2>
+            <div class="h-adr">
+
+                <span class="p-country-name" style="display:none;">Japan</span>
+                    <p>郵便番号：<input type="text" class="p-postal-code" size="8" maxlength="8" name="post_code"  id="post_code"  required></p>
+                    <p>都道府県：<input type="text" class="p-region" name="prefecture"  id="prefecture"  required/></p>
+                    <p>地区町村：<input type="text" class="p-locality" name="city" id="city" required/></p>
+                    <p>　町名　：<input type="text" class="p-street-address p-extended-address" name="town" id="town"  required/></p>
+                    <p>　番地　：<input type="text" name="address" id="address" required></p>
+
+            </div>
+            <button type="submit">送信</button>
+        </form>
+    </article>
+    
+        {{ text | safe }}
+    
+    
+        
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://yubinbango.github.io/yubinbango/yubinbango.js" charset="UTF-8"></script>
+    {{ script | safe }}
+    
+</body>
+</html>

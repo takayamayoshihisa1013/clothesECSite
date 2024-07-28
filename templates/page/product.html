@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="cache-control" content="no-cache, no-store, must-revalidate">
+    <meta http-equiv="pragma" content="no-cache">
+    <meta http-equiv="expires" content="0">
+    <link rel="stylesheet" href="static/css/common.css">
+    <link rel="stylesheet" href="static/css/product.css">
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.css">
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick-theme.css">
+    <link href="https://fonts.googleapis.com/css?family=Alegreya+Sans+SC:300" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>{{ clothes_title }}</title>
+</head>
+<body>
+    <header>
+        <div class="header_flex">
+            <nav class="clothesSite">
+                <form action="/result" method="get">
+                    <ul>
+                        <li><a href="/">Home</a></li>
+                        <li>All Items<button class="submit" type="submit" name="keyWord" value="productList"></button></li>
+                        <li>Popular<button class="submit" type="submit" name="keyWord" value="popular"></button></li>
+                        <li><a href="/inquiry">inquiry</a></li>
+                    </ul>
+                </form>
+                <form action="/result" method="get">
+                    <div>
+                        <input type="search" class="header_search" name="keyWord" placeholder="キーワードを入力">
+                        <button type="submit" class="header_button">
+                            <i class="fas fa-search"></i>
+                        </button>
+                    </div>
+                </form>
+                
+            </nav>
+            
+            <div class="header_img">
+                <img src="static/images/logo/logo_black.PNG" alt="" class="img">
+            </div>
+            <nav class="account_and_sub">
+                <ul class="login">
+                    <li class="logout "><a href="/login">{{ log }}</a></li>
+                    <li class="username list2">{{ acount | safe }}</li>
+                    <!-- <li><a a href="/clothesList" class="h">clothes</a></li> -->
+                </ul>
+                {{ account_detail | safe }}
+                
+            </nav>
+        </div>
+        
+    </header>
+    <article class="first" >
+
+        <div class="return">
+            <a href="{{ return_page }}"><i class="fas fa-arrow-left"></i></a>
+        </div>
+        <section class="favorite_star">
+            <form action="/product" method="get">
+                <button type="submit" name="favorite" value="{{ submit_number }}">{{ favorite_star | safe }}</button>
+            </form>
+        </section>
+        
+        
+        <section>
+            <div class="left">
+                <div class="clothes_img">
+                    <img src="{{ clothes_img }}" alt="">
+                </div>
+                
+            </div>
+            <div class="clothes_text">
+                <form action="/process" method="post" id="product_process">
+                    <div class="clothes_title">
+                        {{ clothes_title }}
+                        
+                    </div>
+                    <div class="priceAndMore">
+                        <div class="price">
+                            <h4>価格<span>￥{{ clothes_price }}</span></h4>
+                        </div>
+                        <div class="review">
+                            <div class="reviewNum">
+                                <h4 class="reviewNumText">{{ review }}</h4>
+                            </div>
+                            <div class="reviewStar">
+                                <div class="star1">
+                                    <i class="fas fa-star base"></i>
+                                    <i class="fas fa-star change"></i>
+                                </div>
+                                <div class="star2">
+                                    <i class="fas fa-star base"></i>
+                                    <i class="fas fa-star change"></i>
+                                </div>
+                                <div class="star3">
+                                    <i class="fas fa-star base"></i>
+                                    <i class="fas fa-star change"></i>
+                                </div>
+                                <div class="star4">
+                                    <i class="fas fa-star base"></i>
+                                    <i class="fas fa-star change"></i>
+                                </div>
+                                <div class="star5">
+                                    <i class="fas fa-star base"></i>
+                                    <i class="fas fa-star change"></i>
+                                </div>
+                            </div>
+                            <div class="reviewList">
+                                <h4>{{ reviewCount }}件の評価</h4>
+                            </div>
+                        </div>
+                    </div>
+                    {{ stock_alert | safe }}
+                    <div class="clothes_detail">
+                        <div class="material">
+                            <p>服の材質/ {{ material }}</p>
+                        </div>
+                        <div class="size_cen">
+                            <p>Sサイズ/ 身長約{{ S }}cm</p>
+                            <p>Mサイズ/ 身長約{{ M }}cm</p>
+                            <p>Lサイズ/ 身長約{{ L }}cm</p>
+                        </div>
+                        <div class="clothes_size">
+                            <h3>サイズ選択</h3>
+                            <div class="size_select">
+                                <div class="size_select_content">
+                                    <input type="radio" id="size_S" name="clothesSize" class="clothesSize" value="S" required checked>
+                                    <label for="size_S">S</label>
+                                </div>
+                                <div class="size_select_content">
+                                    <input type="radio" id="size_M" name="clothesSize" class="clothesSize" value="M">
+                                    <label for="size_M">M</label>
+                                </div>
+                                <div class="size_select_content">
+                                    <input required type="radio" id="size_L" name="clothesSize" class="clothesSize" value="L">
+                                    <label for="size_L">L</label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="count">
+                        <label for="">数量選択</label>
+                        <select name="count" id="count" >
+                            {{ select_tag | safe }}
+                        </select>
+                    </div>
+                    <div class="color">
+                        <h3>色</h3>
+                        <div class="color_list">
+                            {{ img_div | safe }}
+                        </div>
+                    </div>
+                    <div class="buttons">
+                        <div class="kartButton">
+                            
+                            <button type="submit" class="kart" name="next" value="kart_{{ clothes_id }}" form="product_process">カートに入れる</button>
+                            
+                        </div>
+                        <div class="buyButton">
+                            
+                            <button type="button" class="buy_process">購入へ進む</button>
+                            <!-- <button type="submit" class="buy" name="next" value="buy_{{ clothes_id }}">購入する</button> -->
+                            
+                        </div>
+                    </div>
+                    
+                </form>
+            </div>
+        </section>
+        <section class="descriptionAndReview">
+            <div class="descriptionText">
+                <h2>商品説明</h2>
+                <p>{{ productText }}</p>
+            </div>
+            <div class="customerReview">
+                    <form action="/product" method="get" class="star">
+                        <h2>レビューする</h2>
+                        <div class="star_label">
+                            {{ my_review_tag | safe}}   
+                        </div>
+                        <button type="submit" class="star_submit">送信</button>
+                    </form>
+            </div>
+        </section>
+        <section class="other-product">
+            <h3>同じカテゴリーの商品</h3>
+            <form action="/product">
+                <div class="slider9">
+                    {{ other_tag | safe }}
+                </div>
+                
+            </form>
+        </section>
+        <section class="other-product">
+            <h3>人気の商品</h3>
+            <form action="/product">
+                
+                <div class="slider10">
+                    {{ other_favorite_tag | safe }}
+                </div>
+            </form>
+        </section>
+    </article>
+    <article class="address">
+        <div class="return" id="clothes_return">
+            <i class="fas fa-arrow-left"></i>
+        </div>
+        <h1>注文確認</h1>
+        <div class="last_check">
+            <div class="last_check_img_div">
+                <img src="{{ color_first }}" alt="" class="last_check_img">
+            </div>
+            <div class="last_check_detail">
+                <h3>{{ clothes_title }}</h3>
+                <h4 class="size_check">サイズ：S</h4>
+                <h4 class="count_check">個数：1</h4>
+                <h4>値段：￥{{ clothes_price }}</h4>
+            </div>
+        </div>
+        <h1>お届け先指定</h1>
+            <div class="address_check_div">
+                <div>
+                    <input type="radio" id="address_no" name="address_check" value="off" form="product_process" checked>
+                    <label for="address_no">登録されている住所にお届け</label>
+                </div>
+                <div>
+                    <input type="radio" id="address_yes" name="address_check" value="on" form="product_process">
+                    <label for="address_yes">指定した住所にお届け</label>
+                </div>
+            </div>
+            <div class="h-adr">
+
+                <span class="p-country-name" style="display:none;">Japan</span>
+                    <p>郵便番号：<input type="text" class="p-postal-code" size="8" maxlength="8" name="post_code" form="product_process" ></p>
+                    <p>都道府県：<input type="text" class="p-region" name="prefecture"  form="product_process" /></p>
+                    <p>地区町村：<input type="text" class="p-locality" name="city"  form="product_process" /></p>
+                    <p>　町名　：<input type="text" class="p-street-address p-extended-address" name="town" form="product_process"  /></p>
+                    <p>　番地　：<input type="text" name="address" form="product_process"></p>
+
+            </div>
+            <div class="buy_button">
+                <button type="submit" class="buy" name="next" value="buy_{{ clothes_id }}" form="product_process">購入する</button>
+            </div>
+            
+    </article>
+    {{ footer_tag | safe }}
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js"></script>
+    <!-- <script src="./../static/js/script.js"></script> -->
+    <script src="static/js/product.js"></script>
+    <script src="static/js/slick.js"></script>
+    <script src="static/js/scroll.js"></script>
+    <script src="https://yubinbango.github.io/yubinbango/yubinbango.js" charset="UTF-8"></script>
+
+</body>
+</html>

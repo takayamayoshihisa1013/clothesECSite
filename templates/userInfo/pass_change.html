@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>パスワードの変更</h1>
+    <form action="/pass_change" method="post">
+        <h2>メールアドレスを入力してください</h2>
+        <h2>{{ error_tag }}</h2>
+        <input type="email" name="email">
+        <button type="submit">送信</button>
+    </form>
+</body>
+</html>

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css"
+        integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="static/css/common.css">
+    <link rel="stylesheet" href="static/css/administrator.css">
+    <title>売上確認ページ</title>
+</head>
+<body>
+    <header>
+        <div class="header_flex">
+            <nav class="clothesSite">
+                <form action="/result" method="get">
+                    <ul>
+                        <li><a href="/">Home</a></li>
+                        <li>All Items<button class="submit" type="submit" name="keyWord" value="productList"></button>
+                        </li>
+                        <li>Popular<button class="submit" type="submit" name="keyWord" value="popular"></button></li>
+                        <li><a href="/inquiry">inquiry</a></li>
+                    </ul>
+                </form>
+                <form action="/result" method="get">
+                    <div>
+                        <input type="search" class="header_search" name="keyWord" placeholder="キーワードを入力">
+                        <button type="submit" class="header_button">
+                            <i class="fas fa-search"></i>
+                        </button>
+                    </div>
+                </form>
+
+            </nav>
+            <div class="header_img">
+                <img src="static/images/logo/logo_black.PNG" alt="" class="img">
+            </div>
+            <nav class="account_and_sub">
+                <ul class="login">
+                    <li class="logout "><a href="/login">{{ log }}</a></li>
+                    <li class="username list2">{{ acount | safe }}</li>
+                    <!-- <li><a a href="/clothesList" class="h">clothes</a></li> -->
+                </ul>
+                {{ account_detail | safe }}
+
+            </nav>
+        </div>
+
+    </header>
+    <article>
+        <ul class="selectPage">
+            <li>管理者トップ</li>
+            <li>ユーザー管理</li>
+            <li>お問い合わせメール</li>
+            <li>サイト内商品管理</li>
+            <li>アクセス解析</li>
+        </ul>
+        <div class="contents">
+            <section>
+                <img src="data:image/png;base64,{{ img }}" alt="">
+            </section>
+        </div>
+    </article>
+    {{ footer_tag | safe }}
+</body>
+</html>

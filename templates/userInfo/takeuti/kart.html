@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <title>ショッピングカート</title>
+    <link rel="stylesheet" href="static/css/common.css">
+    <link rel="stylesheet" href="static/css/takeuti/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css"
+        integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+    <header>
+        <div class="header_flex">
+            <nav class="clothesSite">
+                <form action="/result" method="getz">
+                    <ul>
+                        <li><a href="/">Home</a></li>
+                        <li>All Items<button class="submit" type="submit" name="keyWord" value="productList"></button>
+                        </li>
+                        <li>Popular<button class="submit" type="submit" name="keyWord" value="popular"></button></li>
+                        <li><a href="/inquiry">inquiry</a></li>
+                    </ul>
+                </form>
+                <form action="/result" method="get">
+                    <div>
+                        <input type="search" class="header_search" name="keyWord" placeholder="キーワードを入力">
+                        <button type="submit" class="header_button">
+                            <i class="fas fa-search"></i>
+                        </button>
+                    </div>
+                </form>
+
+            </nav>
+            <div class="header_img">
+                <img src="static/images/logo/logo_black.PNG" alt="" class="img">
+            </div>
+            <nav class="account_and_sub">
+                <ul class="login">
+                    <li class="logout "><a href="/login">{{ log }}</a></li>
+                    <li class="username list2">{{ acount | safe }}</li>
+                    <!-- <li><a a href="/clothesList" class="h">clothes</a></li> -->
+                </ul>
+                {{ account_detail | safe }}
+
+            </nav>
+        </div>
+
+    </header>
+    <article id="kartAndBuyList">
+        <div class="kart_or_buyList">
+            <button id="kart_click">カート</button>
+            <button id="buy_click">購入履歴</button>
+        </div>
+        <form action="/buy_process" method="post" id="kart_contents">
+            <div class="main-container">
+                <div id="cart-container">
+                    <div id="cart-items">
+
+
+                        <!-- ここにpythonの処理を追加 -->
+
+
+                        <!-- <label for="check">
+                    <div class="cart-item ">
+                        
+                        <div class="cart-item-details">
+                            <div class="cart-item-detail_img">
+                                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQTkF59qwTHMUXK7_dY-x9OFQ1lA4ztYP9TRQ&amp;usqp=CAU" alt="[foxseon] メンズ トレーナー パーカー Tシャツ 長袖 丸首 秋服 オーバーサイズ ゆったり 可愛い カジュアル おしゃれ 快適 人気 シンプル オシャ tシャツ 春秋冬服 無地 パーカー">
+                            </div>
+                            <div class="cart-item-detail">
+                                <div class="product-name">[foxseon] メンズ トレーナー パーカー Tシャツ 長袖 ...</div>
+                                <div class="item-options">
+                                    <div class="product-stock">在庫あり</div>
+                                    <div class="product-size">サイズ: M</div>
+                                    
+                                        <select name="" id="" class="product-quantity quantity">
+                                            <option value="1">1</option>
+                                            <option value="2">2</option>
+                                            <option value="3">3</option>
+                                            <option value="4">4</option>
+                                            <option value="5">5</option>
+                                            <option value="6">6</option>
+                                            <option value="7">7</option>
+                                            <option value="8">8</option>
+                                            <option value="9">9</option>
+                                            <option value="10">10</option>
+                                        </select>
+                                        <button class="remove-item" >削除</button>
+                                        
+                                    
+                                    
+                                    
+                                </div>
+                            </div>
+                            
+                            <div class="item-total-1">￥ <span class="item-total">1,000</span>円</div>
+                        </div>
+                        
+                    
+                    </div>
+                </label>
+                <input type="checkbox" name="check" id="check"> -->
+                        {{ product_data | safe }}
+
+
+
+                    </div>
+                </div>
+                <div id="subtotal-container">
+                    <div id="subtotal">
+                        <p>小計 <span id="subtotal-value">￥0</span></p>
+                        <h1>お届け先指定</h1>
+                        <div class="address_check_div">
+                            <div>
+                                <input type="radio" id="address_no" name="address_check" value="off" checked>
+                                <label for="address_no">登録されている住所にお届け</label>
+                            </div>
+                            <div>
+                                <input type="radio" id="address_yes" name="address_check" value="on">
+                                <label for="address_yes">指定した住所にお届け</label>
+                            </div>
+                        </div>
+                        <div class="h-adr">
+                            <span class="p-country-name" style="display:none;">Japan</span>
+                            <div>
+                                <p>郵便番号：</p><input type="text" class="p-postal-code" size="8" maxlength="8" name="post_code" >
+                            </div>
+                            <div>
+                                <p>都道府県：</p><input type="text" class="p-region" name="prefecture" />
+                                
+                            </div>
+                            <div>
+                                <p>地区町村：</p><input type="text" class="p-locality" name="city"" />
+                            </div>
+                            <div>
+                                <p>　町名　：</p><input type="text" class="p-street-address p-extended-address" name="town"  />
+                                
+                            </div>
+                            <div>
+                                <p>　番地　：</p><input type="text" name="address">
+
+                            </div>
+                        </div>
+
+                        <button id="buy" type="submit">レジに進む</button>
+                    </div>
+                </div>
+
+            </div>
+        </form>
+        <section id="buy_contents">
+            <!-- <h4>1010</h4>
+            <div class="frame">
+                <div class="img_div">
+                    <img src="./../../../static/images/clothes/jacket/31Ptx0UVRdL._AC_UL320_.jpg" alt="">
+                </div>
+                <div class="text">
+                    <h4>a</h4>
+                    <h4>サイズ</h4>
+                    <h4>price</h4>
+                    <h4>個数</h4>
+                </div>
+            </div> -->
+            {{ buy_list | safe }}
+        </section>
+    </article>
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="static/js/takeuti/script.js"></script>
+    <script src="https://yubinbango.github.io/yubinbango/yubinbango.js" charset="UTF-8"></script>
+
+
+</body>
+
+</html>

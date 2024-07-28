@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="static/css/common.css">
+    <link rel="stylesheet" href="static/css/site_administrator.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css"
+        integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Document</title>
+</head>
+<body>
+    <header>
+        <div class="header_flex">
+            <nav class="clothesSite">
+                <form action="/result" method="get">
+                    <ul>
+                        <li><a href="/">Home</a></li>
+                        <li>All Items<button class="submit" type="submit" name="keyWord" value="productList"></button>
+                        </li>
+                        <li>Popular<button class="submit" type="submit" name="keyWord" value="popular"></button></li>
+                        <li><a href="/inquiry">inquiry</a></li>
+                    </ul>
+                </form>
+                <form action="/result" method="get">
+                    <div>
+                        <input type="search" class="header_search" name="keyWord" placeholder="キーワードを入力" value="{{search}}">
+                        <button type="submit" class="header_button">
+                            <i class="fas fa-search"></i>
+                        </button>
+                    </div>
+                </form>
+
+            </nav>
+            <div class="header_img">
+                <img src="static/images/logo/logo_black.PNG" alt="" class="img">
+            </div>
+            <nav class="account_and_sub">
+                <ul class="login">
+                    <li class="logout "><a href="/login">{{ log }}</a></li>
+                    <li class="username list2">{{ account | safe }}</li>
+                    <!-- <li><a a href="/clothesList" class="h">clothes</a></li> -->
+                </ul>
+                {{ account_detail | safe }}
+
+            </nav>
+        </div>
+
+    </header>
+    <article>
+        <section class="menu">
+            <ul>
+                <li id="admin_top_li">管理者トップ</li>
+                <li id="site_data_li">サイトデータ</li>
+                <li id="buy_data_li">売上データ</li>
+                <li id="inquiry_page_li">お問い合わせ</li>
+                <li id="user_data_li">ユーザー管理</li>
+                <li id="product_li">商品管理</li>
+                <li id="feature_li">お知らせ更新</li>
+            </ul>
+        </section>
+        <section class="main" id="admin_top">
+            
+
+            <h2>サイトデータ</h2>
+            <div class="graph_data">
+                <div>
+                    <img src="data:image/png;base64,{{access_img}}" alt="">
+                </div>
+                <div>
+                    <img src="data:image/png;base64,{{site_data_img}}" alt="">
+                </div>
+            </div>
+            <button class="site_data_li">詳しく見る</button>
+            <h2>売上データ</h2>
+            <div class="buy_data_img_div">
+                <div class="buy_data_img">
+                    <img src="data:image/png;base64,{{earnings_img}}" alt="">
+                </div>
+                <div class="buy_data_img">
+                    <img src="data:image/png;base64,{{con_img}}" alt="">
+                </div>
+            </div>
+            <button class="buy_data_li">詳しく見る</button>
+            <h2>最新のお問い合わせ</h2>
+            {{ inquiry_tag | safe }}
+            <button class="inquiry_page_li">詳しく見る</button>
+        </section>
+        <section class="main" id="site_data">
+            <h2 class="h2">サイトデータ</h2>
+            <div class="graph_data">
+                <div>
+                    <img src="data:image/png;base64,{{access_img}}" alt="">
+                </div>
+                <div>
+                    <img src="data:image/png;base64,{{site_data_img}}" alt="">
+                </div>
+            </div>
+            <div>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>日付</th>
+                            <th>クリック数</th>
+                            <th>アクセス数</th>
+                            <th>購入された数</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {{ site_buy_count_graph_tag | safe }}
+                    </tbody>
+                    
+                </table>
+            </div>
+            
+        </section>
+        <section class="main" id="buy_data">
+            <h2 class="h2">売上データ</h2>
+            <div class="buy_data_img_div">
+                <div class="buy_data_img">
+                    <img src="data:image/png;base64,{{earnings_img}}" alt="">
+                </div>
+                <div class="buy_data_img">
+                    <img src="data:image/png;base64,{{con_img}}" alt="">
+                </div>
+            </div>
+            <table>
+                <thead>
+                    <tr>
+                        <th>日付</th>
+                        <th>売り上げ</th>
+                        <th>訪問者数</th>
+                        <th>購入された回数</th>
+                        <th>コンバージョン率<span style="font-size: 10px;">(購入に至った数÷セッション数×100)</span></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    
+                        {{ benefit_dag | safe }}
+                    
+                </tbody>
+                
+            </table>
+        </section>
+        <section class="main" id="inquiry_page">
+            <h2 class="h2">お問い合わせ</h2>
+            
+            {{ inquiry_tag | safe }}
+        </section>
+        <section id="user_data" class="main">
+            <h2 class="h2">ユーザーデータ</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>ユーザー名</th>
+                        <th>メールアドレス</th>
+                        <th>パスワード</th>
+                        <th>最終ログイン時間</th>
+                        <th>ユーザー削除</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    
+                    {{ user_data_table | safe }}
+                    
+                </tbody>
+                
+            </table>
+        </section>
+        <section id="product" class="main">
+            <h2 class="h2">商品管理</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>ユーザーID</th>
+                        <th>商品画像</th>
+                        <th>商品名</th>
+                        <th>購入数</th>
+                        <th>値段</th>
+                        <th>評価</th>
+                        <th>削除</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {{ product_table_tag | safe }}
+                </tbody>
+            </table>
+        </section>
+        <section id="feature" class="main">
+            
+
+            <form action="/feature_setting" method="post" enctype="multipart/form-data" class="page_add">
+                <h1>News追加</h1>
+                <div>
+                    <h3>ページ名</h3>
+                    <input type="text" name="page_name" required>
+                </div>
+                <div>
+                    <h3>HTMLファイル名</h3>
+                    <input type="text" name="filename" required>
+                </div>
+                <div>
+                    <h3>特集の紹介文</h3>
+                    <input type="text" name="new_feature_text" required>
+                </div>
+                <div>
+                    <h3>HTMLファイル</h3>
+                    <input type="file" name="file" id="" required>
+                </div>
+                <div>
+                    <h3>特集の画像</h3>
+                    <input type="file" name="feature_img" id="" required>
+                </div>
+                
+                <button type="submit">送信</button>
+            </form>
+            <form action="/show_or_hide" method="post">
+                <h1>ページの表示/非表示</h1>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>ID</th>
+                            <th>ページ名</th>
+                            <th>表示/非表示</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {{ feature_tag | safe }}
+                    </tbody>
+                </table>
+                <button type="submit">送信</button>
+                <!-- <input type="radio" name="feature" id="show">
+                <label for="show">show</label>
+                <input type="radio" name="feature" id="hide">
+                <label for="hide">hide</label> -->
+            </form>
+        </section>
+    </article>
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    <script src="static/js/site_administrator.js"></script>
+</body>
+</html>

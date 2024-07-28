@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <article>
+        <h1>パスワード変更</h1>
+        <form action="/pass_change_process" method="post">
+            <h2>新しいパスワードを入力して下さい</h2>
+            <input type="password" name="pass1">
+            <h2>確認のためもう一度パスワードを入力してください</h2>
+            <h2>{{ error_tag }}</h2>
+            <input type="password" name="pass2">
+            <button type="submit">決定</button>
+        </form>
+    </article>
+    
+</body>
+</html>

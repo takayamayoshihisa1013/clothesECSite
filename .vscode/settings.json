@@ -1,0 +1,5 @@
+{
+    "appService.defaultWebAppToDeploy": "undefined/subscriptions/a72894b1-d378-4041-9df7-390f238d8814/resourceGroups/HAL-TH23-RG-IH28-B05/providers/Microsoft.Web/sites/HEW-05",
+    "appService.deploySubpath": ".",
+    "git.ignoreLimitWarning": true
+}

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./../../static/css/josei.css">
+    <title>じょーせい</title>
+</head>
+<body>
+    <!-- 画像は必ず1枚以上で1から順に設定していく（1からやっていかないと表示がおかしくなる） -->
+
+    <article>
+        <form action="/josei" method="post" enctype="multipart/form-data">
+            <div class="clothesName">
+                <input type="text" name="clothesName" placeholder="服の名前" required>
+            </div>
+            <div class="image">
+                <div>
+                    1<input type="file" name="clothesImage1">
+                    2<input type="file" name="clothesImage2">
+                    3<input type="file" name="clothesImage3">
+                    4<input type="file" name="clothesImage4">
+                </div>
+                <div>
+                    5<input type="file" name="clothesImage5">
+                    6<input type="file" name="clothesImage6">
+                    7<input type="file" name="clothesImage7">
+                    8<input type="file" name="clothesImage8">
+                </div>
+            </div>
+            <div class="clothesDetail">
+                <select name="gender" id="">
+                    <option value="men">男</option>
+                    <option value="woman">女</option>
+                    <option value="kids">子供</option>
+                    <option value="unisex">男女</option>
+                </select>
+                <select name="type" id="">
+                    <option value="jacket">jacket</option>
+                    <option value="shirt">shirt</option>
+                    <option value="t-shirt">t-shirt</option>
+                    <option value="skirt">skirt</option>
+                    <option value="pants">pants</option>
+                    <option value="underwear">underwear</option>
+                </select>
+                <div class="clothesText">
+                    <textarea name="clothesText" id="" cols="150" rows="20" required placeholder="商品説明"></textarea>
+                </div>
+            </div>
+            <button type="submit">送信</button>
+        </form>
+    </article>
+</body>
+</html>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="static/css/common.css">
+    <link rel="stylesheet" href="">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <header>
+        <div class="header_flex">
+            <nav class="clothesSite">
+                <form action="/result" method="get">
+                    <ul>
+                        <li><a href="/">Home</a></li>
+                        <li>All Items<button class="submit" type="submit" name="keyWord" value="productList"></button>
+                        </li>
+                        <li>Popular<button class="submit" type="submit" name="keyWord" value="popular"></button></li>
+                        <li><a href="/inquiry">inquiry</a></li>
+                    </ul>
+                </form>
+                <form action="/result" method="get">
+                    <div>
+                        <input type="search" class="header_search" name="keyWord" placeholder="キーワードを入力">
+                        <button type="submit" class="header_button">
+                            <i class="fas fa-search"></i>
+                        </button>
+                    </div>
+                </form>
+
+            </nav>
+            <div class="header_img">
+                <img src="static/images/logo/logo_black.PNG" alt="" class="img">
+            </div>
+            <nav class="account_and_sub">
+                <ul class="login">
+                    <li class="logout "><a href="/login">{{ log }}</a></li>
+                    <li class="username list2">{{ account | safe }}</li>
+                    <!-- <li><a a href="/clothesList" class="h">clothes</a></li> -->
+                </ul>
+                {{ account_detail | safe }}
+
+            </nav>
+        </div>
+
+    </header>
+</body>
+</html>

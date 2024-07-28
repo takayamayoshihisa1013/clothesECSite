@@ -1,0 +1,83 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-image: url(./../images/headerIMG/headerIMG/black_00012.jpg);
+
+}
+
+.kuro {
+    background-image: url(./../images/headerIMG/headerIMG/white_00013.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 800px;
+    padding: 20px;
+    margin: 35px auto;
+    border-radius: 3%;
+    margin: 0, auto;
+
+}
+
+
+li {
+    list-style: none;
+}
+
+h1 {
+    text-align: center;
+}
+
+.contentsName li {
+    display: flex;
+}
+
+.gender label {
+    padding-right: 10px;
+}
+
+
+.s {
+    padding-right: 10px;
+}
+
+.m {
+    padding-right: 10px;
+}
+
+.l {
+    padding-right: 10px;
+}
+
+.material label {
+    padding-right: 10px;
+}
+
+
+button[type="submit"] {
+    background-color: #ffff;
+    color: #000;
+    font-size: 1em;
+    padding: 20px 50px;
+    display: block;
+    margin: 0 auto;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 0.6s;
+    border: 1px solid #000;
+}
+
+button[type="submit"]:hover {
+    background-color: #000;
+    color: #ffff;
+    border-radius: 50px;
+}
+
+button img {
+    width: 40px;
+}
+
+.line img {
+    outline: none;
+}

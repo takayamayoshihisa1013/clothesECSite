@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="static/css/common.css">
+    <link rel="stylesheet" href="static/css/result.css">
+    <link href="https://fonts.googleapis.com/css?family=Alegreya+Sans+SC:300" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css"
+        integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>商品リスト</title>
+</head>
+<body>
+    <header>
+        <div class="header_flex">
+            <nav class="clothesSite">
+                <form action="/result" method="get">
+                    <ul>
+                        <li><a href="/">Home</a></li>
+                        <li>All Items<button class="submit" type="submit" name="keyWord" value="productList"></button>
+                        </li>
+                        <li>Popular<button class="submit" type="submit" name="keyWord" value="popular"></button></li>
+                        <li><a href="/inquiry">inquiry</a></li>
+                    </ul>
+                </form>
+                <form action="/result" method="get">
+                    <div>
+                        <input type="search" class="header_search" name="keyWord" placeholder="キーワードを入力" value="{{search}}">
+                        <button type="submit" class="header_button">
+                            <i class="fas fa-search"></i>
+                        </button>
+                    </div>
+                </form>
+
+            </nav>
+            <div class="header_img">
+                
+                <img src="static/images/logo/logo_black.PNG" alt="" class="img">
+                
+            </div>
+            <nav class="account_and_sub">
+                <ul class="login">
+                    <li class="logout "><a href="/login">{{ log }}</a></li>
+                    <li class="username list2">{{ acount | safe }}</li>
+                    <!-- <li><a a href="/clothesList" class="h">clothes</a></li> -->
+                </ul>
+                {{ account_detail | safe }}
+
+            </nav>
+        </div>
+
+    </header>
+    <article>
+        <!-- <form action="/product" method="post">
+            <div class="row">
+                <div class="line">
+                    
+                        <div class="productImg">
+                            <img src="./../../static/images/t-shirt/1.jpg" alt="" class="img">
+                        </div>
+                        <div class="productTitle">
+                            <h3>とてもいいTシャツ</h3>
+                        </div>
+                        <div class='price'>
+                            <h4></h4>
+                        </div>
+                        <button type="submit" class="submit" name="submit" value="safe"></button>
+                    
+                </div>
+                <div class="line">
+                    <a href="">
+                        <div class="productImg">
+                            <img src="./../../static/images/t-shirt/1.jpg" alt="" class="img">
+                        </div>
+                        <div class="productTitle">
+                            <h3>とてもいいTシャツ</h3>
+                        </div>
+                    </a>
+                    
+                    <button type="submit" class="submit" name="submit" value="safe"></button>
+                </div>
+                <div class="line">
+                    <a href="">
+                        <div class="productImg">
+                            <img src="./../../static/images/t-shirt/1.jpg" alt="" class="img">
+                        </div>
+                        <div class="productTitle">
+                            <h3>とてもいいTシャツ</h3>
+                        </div>
+                    </a>
+                    <button type="submit" class="submit" name="submit" value="safe"></button>
+                </div>
+                <div class="line">
+                    <a href="">
+                        <div class="productImg">
+                            <img src="./../../static/images/t-shirt/1.jpg" alt="" class="img">
+                        </div>
+                        <div class="productTitle">
+                            <h3>とてもいいTシャツ</h3>
+                        </div>
+                    </a>
+                    <button type="submit" class="submit" name="submit" value="safe"></button>
+                </div>
+                <div class="line">
+                    <a href="">
+                        <div class="productImg">
+                            <img src="./../../static/images/t-shirt/1.jpg" alt="" class="img">
+                        </div>
+                        <div class="productTitle">
+                            <h3>とてもいいTシャツ</h3>
+                        </div>
+                    </a>
+                    <button type="submit" class="submit" name="submit" value="safe"></button>
+                </div>
+        
+            </div>
+        </form> -->
+        
+            <nav class="productNarrow">
+                <form action="/result" method="GET">
+                    <form action="/result" method="GET">
+                <h3>他の商品も探す</h3>
+                <br>
+                <details class="details js-details">
+                    <summary class="details-summary js-details-summary"><span class="btn"></span>
+                        <div class="underline">メンズ</div>
+                    </summary>
+                    <div class="details-content js-details-content">
+                        <ul>
+                            <li><button type="submit" name="keyWord" value="men t-shirt">t-shirt</button></li>
+                            <li><button type="submit" name="keyWord" value="men shirt">shirt</button></li>
+                            <li><button type="submit" name="keyWord" value="men jacket">jacket</button></li>
+                            <li><button type="submit" name="keyWord" value="men pants">pants</button></li>
+                            <li><button type="submit" name="keyWord" value="men underwear">underwear</button></li>
+                        </ul>
+                    </div>
+                </details>
+
+                <br>
+
+
+
+                <details class="details js-details">
+                    <summary class="details-summary js-details-summary"><span class="btn"></span>
+                        <div class="underline">レーディス</div>
+                    </summary>
+                    <div class="details-content js-details-content">
+                        <ul>
+                            <li><button type="submit" name="keyWord" value="woman t-shirt">t-shirt</button></li>
+                            <li><button type="submit" name="keyWord" value="woman shirt">shirt</button></li>
+                            <li><button type="submit" name="keyWord" value="woman jacket">jacket</button></li>
+                            <li><button type="submit" name="keyWord" value="woman pants">pants</button></li>
+                            <li><button type="submit" name="keyWord" value="woman skirt">skirt</button></li>
+                            <li><button type="submit" name="keyWord" value="woman underwear">underwear</button></li>
+                        </ul>
+                    </div>
+                </details>
+
+                <br>
+
+                <details class="details js-details">
+                    <summary class="details-summary js-details-summary"><span class="btn"></span>
+                        <div class="underline">キッズ</div>
+                    </summary>
+                    <div class="details-content js-details-content">
+                        <ul>
+                            <li><button type="submit" name="keyWord" value="kids t-shirt">t-shirt</button></li>
+                            <li><button type="submit" name="keyWord" value="kids shirt">shirt</button></li>
+                            <li><button type="submit" name="keyWord" value="kids jacket">jacket</button></li>
+                            <li><button type="submit" name="keyWord" value="kids pants">pants</button></li>
+                            <li><button type="submit" name="keyWord" value="kids skirt">skirt</button></li>
+                            <li><button type="submit" name="keyWord" value="kids underwear">underwear</button></li>
+                        </ul>
+                    </div>
+                </details>
+
+                <br>
+
+                
+            </form>
+                    
+                    
+                </form>
+                
+            </nav>
+        <section class="productZone">
+            <div class="showCountAndNarrowDown">
+                <div class="showCount">
+                    <h4>検索結果<span id="count">{{ count }}</span>件</h4>
+                </div>
+                <div class="NarrowDown {{ popular_style }}">
+                    <button class="NarrowDownButton">絞り込み<i class="fas fa-chevron-down"></i></button>
+                    <form action="/result">
+                        <ul>
+                            <li><button type="submit" name="keyWord" value="{{ search }} old">古い順（標準）</button></li>
+                            <li><button type="submit" name="keyWord" value="{{ search }} new">新着</button></li>
+                            <li><button type="submit" name="keyWord" value="{{ search }} high">評価が高い順</button></li>
+                            <li><button type="submit" name="keyWord" value="{{ search }} low">評価が低い順</button></li>
+                            <li><button type="submit" name="keyWord" value="{{ search }} many">レビュー数が多い順</button></li>
+
+
+                        </ul>
+                    </form>
+                </div>
+            </div>
+            {{ not_found | safe }}
+            {{ imageTags | safe }}
+            <div id="page">
+
+            </div>
+
+        </section>
+    </article>
+    {{ footer_tag | safe }}
+    <!-- <script>
+        // スクロールトップのリンクがクリックされたときの処理
+        document.getElementById('scroll-to-top').addEventListener('click', function (e) {
+            e.preventDefault(); // デフォルトのクリック動作をキャンセル
+            scrollToTop(); // スクロールトップの関数を呼び出し
+        });
+    
+        // スクロールトップの関数
+        function scrollToTop() {
+            // スクロール位置をトップに移動するアニメーション
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth' // スムーススクロールを有効にする
+            });
+        }
+    </script> -->
+    <!-- jQueryを先に読み込む -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+<!-- raty.jsを読み込む -->
+
+    <script src="static/js/scroll.js"></script>
+
+    <script src="static/js/result.js"></script>
+</body>
+
+</html>

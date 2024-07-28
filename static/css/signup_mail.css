@@ -1,0 +1,101 @@
+* {
+    margin:  0;
+    padding: 0;
+}
+
+body {
+    background-image: url("../images/headerIMG/headerIMG/black_00012.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    
+}
+
+.before {
+    width: 50vw;
+    padding: 1vw 1vh;
+    background-image: url("./../images/headerIMG/headerIMG/white_00012.jpg");
+    margin: 18vh auto;
+    height: 60vh;
+    border-radius: 30px;
+}
+
+.before h3 {
+    font-size: 3.3vmin;
+    margin-left: 3vw;
+    margin-top: 15vh;
+}
+
+.before input {
+    display: block;
+    width: 43vw;
+    margin: 2vh auto 0;
+    height: 3vh;
+}
+
+.before button {
+    width: 10vw;
+    height: 5vh;
+    margin: 0 auto;
+    display: block;
+    border: #000 solid 2px;
+    color: #000;
+    background-color: #ffff;
+    margin-top: 10vh;
+    transition: 0.4s;
+}
+
+.before button:hover {
+    background-color: #000;
+    color: #ffff;
+    border-radius: 50px;
+}
+
+.after {
+    width: 60vw;
+    margin: 19vh auto;
+    height: 60vh;
+    padding: 1vh 1vw;
+    background-image: url("./../images/headerIMG/headerIMG/white_00012.jpg");
+    border-radius: 50px;
+    text-align: center;
+}
+
+.after h1 {
+    height: 7vh;
+    line-height: 7vh;
+    margin-top: 5vh;
+}
+
+.after h3 {
+    height: 6vh;
+    line-height: 6vh;
+}
+
+.after div {
+    width: 10vw;
+    margin: 0 auto;
+
+}
+
+.after div img {
+    width: 100%;
+    display: block;
+}
+
+.after button {
+    width: 10vw;
+    height: 5vh;
+    margin: 0 auto;
+    display: block;
+    border: #000 solid 2px;
+    color: #000;
+    background-color: #ffff;
+    margin-top: 5vh;
+    transition: 0.4s;
+}
+
+.after button:hover {
+    background-color: #000;
+    color: #ffff;
+    border-radius: 50px;
+}

@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css"
+        integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="static/css/common.css">
+    <link rel="stylesheet" href="static/css/administrator.css">
+    <title>管理者ページ</title>
+</head>
+
+<body>
+    <header>
+        <div class="header_flex">
+            <nav class="clothesSite">
+                <form action="/result" method="get">
+                    <ul>
+                        <li><a href="/">Home</a></li>
+                        <li>All Items<button class="submit" type="submit" name="keyWord" value="productList"></button>
+                        </li>
+                        <li>Popular<button class="submit" type="submit" name="keyWord" value="popular"></button></li>
+                        <li><a href="/inquiry">inquiry</a></li>
+                    </ul>
+                </form>
+                <form action="/result" method="get">
+                    <div>
+                        <input type="search" class="header_search" name="keyWord" placeholder="キーワードを入力">
+                        <button type="submit" class="header_button">
+                            <i class="fas fa-search"></i>
+                        </button>
+                    </div>
+                </form>
+
+            </nav>
+            <div class="header_img">
+                <img src="static/images/logo/logo_black.PNG" alt="" class="img">
+            </div>
+            <nav class="account_and_sub">
+                <ul class="login">
+                    <li class="logout "><a href="/login">{{ log }}</a></li>
+                    <li class="username list2">{{ acount | safe }}</li>
+                    <!-- <li><a a href="/clothesList" class="h">clothes</a></li> -->
+                </ul>
+                {{ account_detail | safe }}
+
+            </nav>
+        </div>
+
+    </header>
+    <article>
+        <section class="graph">
+            
+            <div>
+                <img src="data:image/png;base64,{{bar_data}}" alt="">
+            </div>
+        </section>
+        <section class="all">
+            <form action="/salesManagement">
+                <select name="type" id="">
+                    <option value="None">服のタイプ</option>
+                    <option value="jacket">jacket</option>
+                    <option value="T-shirt">T-shirt</option>
+                    <option value="shirt">shirt</option>
+                    <option value="pants">pants</option>
+                    <option value="skirt">skirt</option>
+                    <option value="underwear">underwear</option>
+                </select>
+                <select name="gender" id="">
+                    <option value="None">性別</option>
+                    <option value="men">メンズ</option>
+                    <option value="woman">レディース</option>
+                    <option value="kids">キッズ</option>
+                    <option value="unisex">ユニセックス</option>
+                </select>
+                <input type="text" placeholder="服の名前" name="sales_name">
+                <select name="narrow" id="">
+                    <option value="buy">購入回数順</option>
+                    <option value="click">クリック回数順</option>
+                    <option value="add">追加順</option>
+                    <option value="review">評価順</option>
+                    <option value="stock">在庫数順</option>
+                    <option value="sales">合計売上順</option>
+                </select>
+                <input type="radio" id="sort_desc" name="sort" value="DESC" checked>
+                <label for="sort_desc">降順</label>
+                <input type="radio" id="sort_asc" name="sort" value="ASC">
+                <label for="sort_asc">昇順</label>
+                <button type="submit">検索</button>
+            </form>
+            <form action="/product_management" method="get">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>商品画像</th>
+                            <th>商品名</th>
+                            <th>クリック回数</th>
+                            <th>購入回数</th>
+                            <th>評価</th>
+                            <th>値段</th>
+                            <th>売上合計金額</th>
+                            <th>在庫状況</th>
+                            <th>登録日</th>
+                            <th>最終更新日</th>
+                            <th>在庫追加・削除</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {{ productList | safe }}
+                    </tbody>
+                </table>
+            </form>
+        </section>
+    </article>
+    {{ footer_tag | safe }}
+</body>
+
+</html>

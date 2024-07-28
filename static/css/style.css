@@ -1,6 +1,13 @@
+@import url('https://fonts.googleapis.com/css2?family=Itim&display=swap');
+
 * {
     margin: 0;
     padding: 0;
+}
+
+body {
+    width: 100%;
+    transition: 0.4s;
 }
 
 
@@ -27,127 +34,282 @@ ul {
 }
 
 
-/* .header_flex {
-    display: flex;
-    justify-content: space-around;
-    width: 100%;
-}
+
+
 
 header {
-    width: 150px;
+    height: 30vh;
     width: 100%;
-    background-color: #4682b4;
+    background-color: #000;
+    position: fixed;
+    z-index: 50;
+    transition: 0.6s;
+    top:0;
+    color: #ffff;
+
 }
-
-header .search {
-    width: 500px;
-    height: 25px;
-    border-radius: 50px;
-}
-
-header .search_button {
-    width: 50px;
-} */
-
-/* .button_div {
-    height: 30px;
-    line-height: 50px;
-}
-
-.header_img {
-    width: 100px;
-    height: 100px;
-}
-
-
-.search_div {
-    line-height: 100px;
-}
-
-.acount {
-    width: 150px;
-    height: 50px;
-}
-
-header nav {
-    height: 50px;
-}
-
-
-header nav ul {
-    justify-content: space-around;
-    list-style: none;
-    text-align: center;
-    display: flex;
-}
-
-header nav ul a {
-    display: block;
-    width: 25%;
-    line-height: 50px;
-    border: #FFFF solid 1px;
-} */
-
-
-/* header .header_flex {
-    display: flex;
-    justify-content: space-around;
-}
-
-.header_img {
-    
-}
-
-
-.header_flex .nav_flex {
-    justify-content: space-aroundd;
-} */
-
-header {
-    height: 15vh;
-}
-
-
-.header_img {
-    line-height: 15vh;
-    width: 20vw;
-}
-
 
 
 .header_flex {
     display: flex;
-    justify-content: space-around;
+    height: 100%;
 }
 
-.search_div {
-    line-height: 15vh;
+header nav {
+    width: 40vw;
+    height: 100%;
+    /* line-height: 30vh; */
+}
+
+header .clothesSite {
+    margin-top: 6vh;
+    height: 25vh;
+}
+
+header .clothesSite ul {
+    width: 35vw;
+    display: flex;
+    margin: 0 auto;
+    font-family: 'Itim', cursive;
+}
+
+header .clothesSite ul li {
+    width: 8.75vw;
+    text-align: center;
+    font-size: 3vmin;
+    height: 4vh;
+    /* border-left: 1px solid #ffff; */
+    position: relative;
+    transition: 0.4s;
+    line-height: 4vh;
+
+}
+
+header .clothesSite ul li:nth-child(2),header .clothesSite ul li:nth-child(3),header .clothesSite ul li:nth-child(4) {
+    border-left: 2px solid rgba(105,105,105,0.65);
+}
+
+header .clothesSite ul li:hover {
+    background-color: rgba(105,105,105,0.65);
+}
+
+
+
+
+
+header .clothesSite form div {
+    margin: 4vh auto;
+    height: 4vh;
+    width: 30vw;
+    display: flex;
+}
+
+
+header .clothesSite div .header_search {
+    width: 25vw;
+    border-radius: 50px;
+    display: block;
+    text-indent: 2%;
+    font-size: 2vmin;
+    /* margin: 0 auto; */
+}
+
+header .clothesSite div .header_button  {
+    width: 5vw;
+    display: block;
+    border-radius: 50px;
+    background-color: #ffff;
+    color: #000;
+    border: 2px solid #ffff;
+    font-size: 3vmin;
+}
+
+
+header .clothesSite div .header_button:hover {
+    background-color: #696969;
+}
+
+header .clothesSite div .header_button i {
+    color: #000;
+}
+
+header .address {
+    width: 30vw;
+    margin: 0 auto;
+    font-size: 2vmin;
+    color: #ffd700;
+    opacity: 1;
+    transition: 0.3s;
+}
+
+header .address_title {
     text-align: center;
 }
 
-.search {
-    width: 30vw;
-    height: 3vh;
-    border-radius: 15vw;
-
+header .address_title i {
+    margin-right: 20px;
 }
 
-header nav ul {
-    list-style: none;
-    display: flex;
-    /* padding: 4vh 0; */
+
+.header_img {
+    
+    height: 30vh;
     width: 20vw;
-    justify-content: space-around;
+    transition: 0.4s;
+    
 }
 
-header nav ul li {
-    padding: 5vh 0;
+.header_img a {
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+.header_img img {
+    display: block;
+    margin: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    transition: 0.4s;
+}
+
+/* header .account_and_sub {
+    height: 25vh;
+} */
+
+header .account_and_sub ul{
+    
+    width: 25vw;
+    margin: 0 auto;
+}
+
+header .account_and_sub .login {
+    height: 5vh;
+    margin: 5vh auto 2vh;
+    text-align: center;
+    display: flex;
     line-height: 5vh;
-
 }
 
-header nav ul li:hover {
-    border-bottom: 1px solid;
+
+
+header .account_and_sub .login .logout {
+    border: 2px solid #ffff;
+    width: 10vw;
+    margin: 0 1.25vw;
+    font-size: 3vmin;
+    transition: 0.6s;
+    font-family: 'Itim', cursive;
+    line-height: calc(5vh - 2px);
+}
+
+header .account_and_sub .login .logout:hover {
+    background-color: rgba(105,105,105,0.65);
+}
+
+
+header .account_and_sub .login .username {
+    width: 12.5vw;
+    font-size: 2.5vmin;
+}
+
+.account_and_sub .account {
+    width: 25vw;
+    text-align: center;
+    font-size: 2.2vmin;
+    color: #ffd700;
+    
+}
+
+.account_and_sub .account div {
+    margin: 2vh 0;
+    display: flex;
+    height: 3vh;
+    
+}
+
+.account_and_sub .account div .list1,.account_and_sub .account div .list2 {
+    width: 10vw;
+    margin: 0 1.25vw;
+    position: relative;
+    transition: 0.4s;
+    height: 4vh;
+    line-height: 4vh;
+}
+
+
+
+.account_and_sub .account div .list1:hover, .account_and_sub .account div .list2:hover {
+    background-color: #696969;
+    /* opacity: 0.6; */
+}
+
+
+.account_and_sub .sub {
+    width: 25vw;
+    display: flex;
+    
+    margin: 4vh auto 0;
+    height: 5vh;
+    transition: 0.6s;
+}
+
+.account_and_sub .sub li {
+    width: 6.25vw;
+    text-align: center;
+    height: 5vh;
+}
+
+.account_and_sub i {
+    transition: 0.4s;
+    font-size: 4vmin;
+}
+
+.account_and_sub i:hover {
+    font-size: 6vmin;
+}
+
+.account_and_sub li:nth-child(1) i:hover{
+    background: -webkit-linear-gradient(0deg, #4C64D3, #CF2E92,#F26939,#FFDD83);/*//背景色にグラデーションを指定*/
+    -webkit-background-clip: text;/*//テキストでくり抜く*/
+    -webkit-text-fill-color: transparent;/*//くり抜いた部分は背景を表示*/
+}
+
+.account_and_sub li:nth-child(2) i:hover{
+    color: #1DA1F2;
+}
+
+.account_and_sub li:nth-child(3) i:hover{
+    color: #00B900;
+}
+
+
+
+
+
+
+
+.h {
+    position: relative;
+    text-decoration: none; /* アンダーラインを非表示にするために必要 */
+}
+
+.h::after {
+    position: absolute;
+    left: 0;
+    content: '';
+    width: 100%;
+    height: 2px;
+    background: #000000;
+    bottom: -1px;
+    transform: scale(0, 1);
+    transform-origin: center top; /*変形（アンダーラインの伸長）の原点がaタグ（各メニュー）の右端*/
+    transition: transform 0.3s;   /*変形の時間*/
+    }
+    
+.h:hover::after {
+    transform: scale(1, 1); /*ホバー後、x軸方向に1（相対値）伸長*/
 }
 
 
@@ -156,23 +318,26 @@ header nav ul li:hover {
 
 .bread {
     height: 5vh;
+    background-color: #f0fff0;
+    position: fixed;
+    top: 15vh;
+    width: 100%;
+    z-index: 20;
+    transition: 1s;
+}
+
+
+/* .slider1 {
     background-color: #000;
-}
+} */
 
 
-.slider1 img {
-    opacity: 0.8;
-    transition: 0.6s;
-}
 
-.slider1 img:hover {
-    opacity: 1;
-    
-}
 
 
 .nav_flex div {
     line-height: 16vh;
+    transition: 1s;
 }
 
 
@@ -196,27 +361,40 @@ header nav ul li:hover {
 }
 
 
-
-
+article {
+    width: 100%;
+    background-color: #000;
+    transition: 0.6s;
+    /* background-image: url(./../../static/images/headerIMG/headerIMG/paint_00029.jpg); */
+}
 
 
 .one {
     width: 100%;
     margin: 0 auto;
     /* padding-bottom: 5vh; */
-    background-color: #000;
+    background-color: #000!important;
+    padding-top: 35vh;
+    top: 0vh;
+    position: fixed;
+    z-index: -1;
+    height: 70vh;
 }
 
 
-.menu, .menu2 {
+.menu, .menu2 form {
     display: flex;
-    width: 50vw;
     margin: 0 auto;
     justify-content: space-around;
     padding: 30px 0;
 }
 
-.menu2 {
+.menu {
+    width: 50vw;
+
+}
+
+.menu2 form {
     width: 70vw;
 }
 
@@ -230,74 +408,475 @@ header nav ul li:hover {
 
 
 .div_img {
-    width: 100%;
+    /* width: 100%; */
     text-align: center;
+    margin: 0 auto;
+    height: 100%;
+    max-width: 100%;
+    
+    /* width: 23.75vw; */
+    opacity: 1;
+    /* background-color: #000; */
+    transition: 1s;
 }
 
-.two {
-    text-align: center;
-    padding: 50px 0;
-    height: 60vh;
+.one .div_img:hover {
+    filter: brightness(1);
 }
 
-.q {
-    padding-bottom: 30px;
-}
-
-.two .menu .menu_title {
-    height: 30px;
-}
-
-.two h2 {
-    font-size: 30px;
-    font-family: cursive;
-}
-
-.or {
-    line-height: 300px;
-}
-
-.three {
-    /* margin-top: -40vh; */
-    transition: 0.8s;
-}
-
-.three .lay {
-    width: 100%;
-}
-
-/* .three .lay .product {
-    width: ;
+/* .div_img:hover {
+    opacity: 0!important;
+    
 } */
 
 
-.slider2 .slick-slide {
-    height: 200px;
+
+
+.onePointTwoFive {
     width: 100%;
+    height: 400vh;
+    margin: 100vh 0 20vh;
+    padding: 100vh 0 0;
+    
+    position: relative;
+}
+
+.onePointTwoFive .SiteConcept {
+    display: flex;
+    position: sticky;
+    top: 22vh;
+    left: 0;
+    opacity: 0;
+    
+    transition: 1s;
+}
+
+.onePointTwoFive .SiteConcept .img_div1, .onePointTwoFive .SiteConcept .img_div2 {
+    height: 80vh;
+    width: 25%;
+}
+
+.onePointTwoFive .SiteConcept .img_div1 img , .onePointTwoFive .SiteConcept .img_div2 img  {
+    height: 100%;
+    max-width: 100%;
+    object-fit: cover;
+    backface-visibility: hidden;
+    transition: 0.4s;
+    /* opacity: 0; */
 }
 
 
-.three .lay_s {
+
+
+
+.onePointTwoFive .SiteConcept .text {
+    width: 50%;
+    padding-top: 18vh;
+    height: 40vh;
+    line-height: 10vh;
+    color: #ffff;
+    text-align: center;
+    margin-bottom: 20vh;
+}
+
+.onePointTwoFive .SiteConcept .text p {
+    font-size: 3.5vmin;
+    font-family:"Yu Gothic", "游ゴシック", YuGothic, "游ゴシック体";
+}
+
+#text1 {
+    opacity: 0;
+    transition: 0.6s;
+}
+
+#text2 {
+    opacity: 0;
+    transition: 0.6s;
+}
+
+#text3 {
+    opacity: 0;
+    transition: 0.6s;
+}
+
+#text4 {
+    opacity: 0;
+    transition: 0.6s;
+}
+
+.onePointFive {
+    width: 100%;
+    padding-top: 5vh;
+    padding-bottom: 5vh;
+    height: 100vh;
+}
+
+.onePointFive .newsTitle {
     width: 80%;
+    margin: 0 auto;
+    border-bottom: #000 1px solid;
+    margin-bottom: 10vh;
+
+}
+
+.onePointFive .newsTitle h2 {
+    padding-left: 10%;
+    font-size: 50px;
+    font-family: 'Alegreya Sans SC', sans-serif;
+}
+
+.onePointFive .newsSlider {
+    width: 55%;
+    margin: 0 auto 2vh!important;
+    height: 70vh;
+    transition: 0.4s;
+}
+
+.onePointFive .newsSlider:hover {
+    opacity: 0.8;
+}
+
+.onePointFive .newsSlider .newsSlider_img {
+    width: 100%;
+    height: 100%;
+}
+
+
+.onePointFive .newsSlider .newsSlider_img  img{
+    height: 100%;
+    max-width: 100%;
+    display: block;
+    margin: 0 auto;
+    
+}
+
+.onePointFive .newsSlider .slick-arrow::before {
+    font-size: 30px!important;
+}
+
+.onePointFive .newsSlider .slick-next {
+    right: -15vw!important;
+    opacity:1!important;
+    z-index: 10;
+    /* top: 30vh; */
+    height: 5vh;
+    line-height: 5vh;
+    width: 5vw;
+    text-align: center;
+}
+
+.onePointFive .newsSlider .slick-next::before {
+    color: #000!important;
+    content: "\f061";
+    font-family: "Font Awesome 5 Free";
+    font-weight:900;
+}
+
+.onePointFive .newsSlider .slick-prev {
+    left: -15vw!important;
+    /* top: 30vh; */
+    opacity:1!important;
+    z-index: 10;
+    height: 5vh;
+    line-height: 5vh;
+    width: 5vw;
+    text-align: center;
+    /* bottom: 0!important; */
+}
+
+.onePointFive .newsSlider .slick-prev::before {
+    color: #000!important;
+    color: #000!important;
+    content: "\f060";
+    font-family: "Font Awesome 5 Free";
+    font-weight:900;
+}
+
+/* slickのドットの大きさ */
+.onePointFive .newsSlider .slick-dots li button:before{
+	font-size:10px!important;
+}
+/* slickのドットの高さ */
+.onePointFive .newsSlider .slick-dots{
+	bottom: 0vh!important;
+    /* text-align: center; */
+    top: 70vh;
+}
+
+.onePointFive .newsSlider .slick-dots li button:before {
+    color: #000!important;
+}
+
+.onePointFive .news_detail {
+    height: 10vh;
+    width: 100%;
     margin: 0 auto;
 }
 
-.three .lay_s {
+.onePointFive .news_detail p {
+    font-size: 15px;
+}
+
+
+
+
+
+
+.two {
+    /* text-align: center; */
+    
+    width: 100%;
+    
+    padding: 5vh 0;
+    background-color: rgba(255,204,0,0.1);
+    transition: 0.4s;
+    font-family: 'Vollkorn', serif;
+    /* background-image: url(./../images/sexImg/71179344.jpg); */
+    /* height: 60vh; */
+    /* background-image: url(./../images/headerIMG/headerIMG/redeye_1.webp);
+    background-repeat: no-repeat; */
+    /* background-color: #000; */
+}
+
+
+
+.two  {
+    font-size: 30px;
+    
+}
+
+.clothes_select {
+    height: 75vh;
+}
+
+.sex_select ul{
+    justify-content: space-around;
+    display: flex;
+    width: 36vw;
+    margin: 0 auto;
+    position: relative;
+}
+
+.sex_select ul li {
+    width: 100%;
+    text-align: center;
+    font-size: 22px;
+    height: 5vh;
+    cursor: pointer;
+    line-height: 5vh;
+}
+
+.sex_select ul li:nth-child(1),.sex_select ul li:nth-child(2),.sex_select ul li:nth-child(3) {
+    border-right: 2px solid;
+}
+
+.sex_select .back {
+    background: gray;
+    position: absolute;
+    width:calc(36vw / 4);
+    opacity: 0.3;
+    top: 0;
+    left: 0;
+    z-index: 20;
+    display: block;
+    transition: 0.4s;
+}
+
+
+
+.sex_clothes2 {
+    
+    padding-left: 15%;
+
+}
+
+
+
+
+.clothes_select {
+    /* display: flex; */
+    width: 100%;
+    margin: 10vh auto 5vh;
+    height: 80vh;
+}
+
+.clothes_select .row {
+    display: flex;
+    justify-content: space-around;
+    width: 90%;
+    height: 100%;
+    margin: 0 auto 4vh;
+
+}
+
+.clothes_select .row .frame {
+    width: 20%;
+    height: 40vh;
+    position: relative;
+    margin: 0 auto;
+    padding: 0.5vh 0.3vw;
+}
+
+.clothes_select .row .frame .img {
+    width: 100%;
+    height: 35vh;
+}
+
+.clothes_select .row .frame .img  img {
+    height: 100%;
+    max-width: 100%;
+    display: block;
+    margin: 0 auto;
+}
+
+.clothes_select .row .frame .title {
+    height: 5vh;
+    text-align: center;
+    font-size: 2vmin;
+}
+
+
+
+
+
+.Title {
+    width: 80%;
+    margin: 0 auto;
+    border-bottom: #000 1px solid;
+    margin-bottom: 5vh;
+}
+
+.Title h2 {
+    padding-left: 10%;
+    font-size: 50px;
+    font-family: 'Alegreya Sans SC', sans-serif;
+}
+
+
+
+
+
+.sex_img {
+    width: 20%;
+}
+
+.sex_img img {
+    max-width:100%;
+    height: 100%;
+    object-fit: cover;
     display: block;
 }
 
-.menu_solid {
-    cursor: pointer;
-    transition: 0.6s;
-    width: 15vw;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.three {
+    /* margin-top: -40vh; */
+    /* transition: 0.8s; */
+    width: 100%;
+    height: 150vh;
+    padding: 5vh 0;
+    /* height: ; */
 }
 
-.menu_solid:hover {
-    transform: scale(1.2,1.2);
+.three .new_product {
+    display: flex;
+    width: 90%;
+    justify-content: space-around;
+    margin: 0 auto;
+    
 }
 
-.menu_solid h2 {
-    font-size: 25px;
+.three .new_product .product_top {
+    width: 40%;
+    position: relative;
+    height: 90vh;
+    padding: 1vh 1vw;
+}
+
+.three .new_product .product_top .top_img {
+    height: 50vh;
+    width: 100%;
+}
+
+.three .new_product .product_top .top_img img {
+    display: block;
+    margin: 0 auto;
+    max-width: 100%;
+    height: 100%;
+}
+
+.three .new_product .product {
+    width: 50%;
+}
+
+.three .new_product .product .row {
+    display: flex;
+    width: 100%;
+    justify-content: space-around;
+    height: 45vh;
+    
+}
+
+.three .new_product .product .row .frame {
+    width: 30%;
+    height: 43vh;
+    position: relative;
+    padding: 1vh 1vw;
+}
+
+
+.three .new_product .product .row .frame .img {
+    width: 100%;
+    height: 30vh;
+}
+
+.three .new_product .product .row .frame .img  img {
+    height: 100%;
+    max-width: 100%;
+    display: block;
+    margin: 0 auto;
+}
+
+.three .new_product .product .row .frame .title {
+    height: 8vh;
+    width: 100%;
+}
+
+.three .new_product .product .row .frame .price {
+    width: 100%;
+    height: 5vh;
+}
+
+.three .submit:hover , .clothes_select .submit:hover{
+    opacity: 0.3;
 }
 
 
@@ -331,20 +910,81 @@ footer {
 
 
 
-
 .slider1 {
-    background-color: black;
+    
     margin: 0 auto;
-    width: 95vw;
-    height: 80vh;
+    width: 100%;
+    height: 55vh;
+    background-color: #ffff;
 }
 
 
 /* slick */
 .slider1 .slick-slide {
-    height: 75vh;
+    height: 55vh;
     
 }
+
+
+.slick-arrow::before {
+    font-size: 7vmin!important;
+}
+
+.slick-next {
+    right: 100px!important;
+    
+    
+    opacity:1!important;
+    z-index: 10;
+}
+
+.slick-next::before {
+    color: #000!important;
+}
+
+.slick-prev {
+    left: 100px!important;
+    
+    opacity:1!important;
+    z-index: 10;
+    /* bottom: 0!important; */
+}
+
+.slick-prev::before {
+    color: #000!important;
+}
+
+/* slickのドットの大きさ */
+.slick-dots li button:before{
+	font-size:1.3vmin!important;
+}
+/* slickのドットの高さ */
+.slick-dots{
+	bottom: -40px!important;
+    /* color: #f0fff0; */
+}
+
+.slick-dots li button:before {
+    color: #ffd700!important;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 /* 出現 */
 .active {
@@ -357,13 +997,16 @@ footer {
 
 
 .account_detail {
-    z-index: 10;
     position: fixed;
     left: 70vw;
-    background-color: white;
+    background-color: #d3d3d3;
     width: 30vw;
     height: 20vh;
-    top: 17vh;
+    top: 15vh;
+    transition: 1s;
+    opacity: 0;
+    z-index: 30;
+    background-image: url(./../images/headerIMG/headerIMG/white_00012.jpg);
 }
 
 .account_detail nav {
@@ -371,8 +1014,189 @@ footer {
     margin: 0 auto;
     height: 16vh;
     padding-top: 2vh;
+    display: flex;
+    justify-content: space-around;
 }
 
 .account_detail nav ul {
+    height: 16vh;
+}
+
+.account_detail nav ul li {
+    height: 25%;
+    line-height: 4vh;
+    width:  10vw;
+}
+
+.account_detail nav ul li a {
+    margin-left: 10px;
     
+}
+
+.account_detail nav ul li:hover {
+    background-color: #d3d3d3; 
+    opacity: 0.6;   
+}
+
+/* .account_detail nav ul li a {
+    
+} */
+
+.show {
+    /* 表示されているかどうかのクラス */
+    opacity: 1;
+    transition: 1s;
+}
+
+
+/* article {
+    display: none;
+} */
+
+.one .s_img {
+    position: relative;
+    width: 100%!important;
+    background-color: #ffff;
+    transition: 0.6s;
+    vertical-align: auto;
+}
+
+.one .s_img {
+    height: 55vh;
+    width: 100%;
+}
+
+
+/* 
+s_img button {
+    opacity: 0.8;
+    background-color: rgba(105,105,105,0.3);
+} */
+
+.submit {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    opacity: 0;
+    /* ボタンタフの設定を消していく */
+    /* background-color: transparent; */
+    background-color: #000;
+    border: none; 
+    cursor: pointer;
+    padding: 0;
+    outline: none;
+    appearance: none;
+    z-index: 20;
+    transition: 0.4s;
+}
+
+.one .submit:hover {
+    opacity: 0.4;
+}
+
+
+
+/* #mensClothes {
+    display: none;
+} */
+
+
+
+
+
+
+
+.feature {
+    position: relative;
+}
+
+
+footer {
+    width: 100%;
+    height: 350px;
+    background-color: black;
+    color: white;
+}
+
+.footer-box {
+    width: 1200px;
+    margin: 0 auto;
+    padding: 30px 0 0 0;
+    display: flex;
+    justify-content: space-between;
+    font-size: 15px;
+}
+
+.toppage img {
+    width: 300px;
+    /* transition: 0.3s ease; */
+}
+/* 
+.toppage img:hover {
+    opacity: 0.6;
+    content: url('static/images/logo/ラーの翼神竜.png');
+} */
+
+.category h2 {
+    /* width: 200px; */
+    margin-bottom: 10px;
+    border-bottom: solid 3px white;
+    /* border-left: solid 3px white; */
+}
+
+.category-top {
+    display: flex;
+}
+
+.category-box {
+    margin: 0 50px 0 0;
+}
+
+
+
+
+.category-box .footer_button {
+    
+    margin-bottom: 10px;
+    transition: 0.3s ease;
+    border: none;
+    background-color: #000;
+    color: #ffff;
+    font-size: 2.8vmin;
+}
+
+.category-box .footer_button:hover {
+    opacity: 0.5;
+}
+
+.snsbox {
+    width: 250px;
+}
+
+.snsbox h2{
+    margin-bottom: 10px;
+    border-bottom: solid 3px white;
+}
+
+.footer-sns {
+    display: flex;
+}
+
+.footer-sns i {
+    font-size: 40px;
+    margin-right: 30px;
+    transition: 0.3s ease;
+}
+
+.footer-sns i:hover {
+    opacity: 0.6;
+}
+
+
+small {
+    text-align: center;
+    display: block;
+    margin: 0 auto;
 }

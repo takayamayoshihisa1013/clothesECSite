@@ -1,0 +1,341 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+article {
+    width: 100%;
+}
+
+.menu {
+    width: 15vw;
+    position: fixed;
+    background-color: #2f4f4f;
+    color: #ffff;
+    text-align: center;
+    height: 100vh;
+}
+
+.menu ul li {
+    height: 6vh;
+    border-bottom: 1px #ffff solid;
+    line-height: 6vh;
+    cursor: pointer;
+    transition: 0.4s;
+}
+
+.menu ul li:hover {
+    background-color: #1e3333;
+}
+
+.main {
+    margin-left: 15vw;
+    margin-top: 1vh;
+}
+
+article {
+    padding-top: 22vh;
+
+}
+
+#admin_top {
+    display: block;
+    margin-bottom: 5vh;
+}
+
+#site_data {
+    display: none;
+}
+
+#buy_data {
+    display: none;
+}
+
+#inquiry_page {
+    display: none;
+}
+
+#user_data {
+    display: none;
+}
+
+#product {
+    display: none;
+}
+
+#feature {
+    display: none;
+    justify-content: space-around;
+}
+
+
+
+#admin_top h2, .h2 {
+    padding-left: 1vw;
+    margin-top: 4vh;
+    margin-left: 2vw;
+    border-left: #2f4f4f 0.3vw solid;
+    border-bottom: 1px solid #2f4f4f;
+}
+
+#admin_top .graph_data, #admin_top .buy_data_img_div {
+    width: 100%;
+    display: flex;
+}
+
+#admin_top .graph_data div , #admin_top .buy_data_img_div div{
+    width: 100%;
+}
+
+#admin_top .graph_data div img , #admin_top .buy_data_img_div div img{
+    display: block;
+    margin: 0 auto;
+    width: 100%;
+}
+
+#admin_top button {
+    width: 10vw;
+    display: block;
+    border: 2px solid;
+    color: #000;
+    transition: 0.4s;
+    background-color: #ffff;
+    margin: 0 auto;
+    height: 5vh;
+    cursor: pointer;
+}
+
+#admin_top button:hover {
+    background-color: #000;
+    color: #ffff;
+    border-radius: 50px;
+}
+
+
+
+#admin_top div {
+    width: 90%;
+    margin: 0 auto;
+}
+
+#admin_top .inquiry_div {
+    padding: 5vh 0;
+}
+
+#admin_top .inquiry_detail {
+    display: flex;
+    text-align: center;
+}
+
+#admin_top .inquiry_detail h3 {
+    width: 30%;
+}
+
+#admin_top .inquiry_detail p {
+    
+    min-height: 3vh;
+    margin-left: 2vw;
+}
+
+#admin_top .inquiry_text {
+    border: 1px solid;
+    min-height: 20vh;
+}
+
+
+
+
+#site_data .graph_data {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+#site_data .graph_data div {
+    width: 50%;
+}
+
+#site_data .graph_data div img {
+    width: 100%;
+}
+
+#site_data table {
+    width: 100%;
+    text-align: center;
+    border-collapse: collapse;
+}
+
+#site_data table td,#site_data table th {
+    border: 1px solid;
+    height: 8vh;
+    font-size: 2.5vmin;
+}
+
+#buy_data .buy_data_img_div {
+    width: 100%;
+    display: flex;
+}
+
+#buy_data .buy_data_img {
+    display: flex;
+    width: 50%;
+}
+
+#buy_data .buy_data_img img {
+    width: 100%;
+    
+}
+
+#buy_data table{
+    width: 100%;
+    border-collapse: collapse;
+}
+
+#buy_data table th, #buy_data table td{
+    border: 1px solid;
+    text-align: center;
+}
+
+#buy_data table th, #user_data table th {
+    height: 6vh;
+    font-size: 2.5vmin;
+}
+
+
+#buy_data table td, #user_data table td {
+    height: 8vh;
+    font-size: 2.3vmin;
+}
+
+#user_data table {
+    margin-top: 2vh;
+    width: 100%;
+    border-collapse: collapse;
+}
+
+#user_data table th, #user_data table td{
+    border: 1px solid;
+    text-align: center;
+}
+
+
+#inquiry_page {
+    
+}
+
+#inquiry_page div {
+    width: 90%;
+    margin: 0 auto;
+}
+
+#inquiry_page .inquiry_div {
+    padding: 5vh 0;
+}
+
+#inquiry_page .inquiry_detail {
+    display: flex;
+    text-align: center;
+}
+
+#inquiry_page .inquiry_detail h3 {
+    width: 30%;
+}
+
+#inquiry_page .inquiry_detail p {
+    
+    min-height: 3vh;
+    margin-left: 2vw;
+}
+
+#inquiry_page .inquiry_text {
+    border: 1px solid;
+    min-height: 20vh;
+}
+
+#product  table {
+    width: 100%;
+    text-align: center;
+    border-collapse: collapse;
+    margin-top: 2vh;
+}
+
+#product table thead th {
+    border: 1px solid;
+}
+
+#product table tbody tr {
+    justify-content: space-around;
+}
+
+#product table tbody tr td {
+    width: 14%;
+    border: 1px solid;
+    height: 20vh;
+}
+
+#product  table tbody img {
+    max-width: 100%;
+    height: 100%;
+    display: block;
+    margin: 0 auto;
+}
+
+#feature h1 {
+    border-bottom: 1px solid #2f4f4f;
+    border-left: 3px solid #2f4f4f;
+    padding-left: 1vw;
+    margin-top: 2vh;
+    margin-bottom: 2vh;
+}
+
+#feature form {
+    width: 40%;
+    height: 50vh;
+}
+
+#feature table {
+    width: 30vw;
+    margin: 0 auto;
+    text-align: center;
+}
+
+#feature .page_add div {
+    width: 100%;
+    height: 10vh;
+}
+
+#feature .page_add div input{
+    display: block;
+    width: 100%;
+    height: 3vh;
+    font-size: 2.5vmin;
+}
+
+#feature .page_add div input[type=file] {
+    height: 5vh;
+    font-size: 2vmin;
+}
+
+#feature form button {
+    width: 8vw;
+    display: block;
+    margin: 0 auto;
+    background-color:  black;
+    color: #ffff;
+    transition: 0.4s;
+    margin-top: 2vh;
+    height: 5vh;
+}
+
+#feature form button:hover {
+    background-color: #FFFF;
+    border: solid 2px #000;
+    color: #000;
+    border-radius: 50px;
+}
+
+table th {
+    background-color: #d3d3d3;
+}
+
+

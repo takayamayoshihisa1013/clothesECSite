@@ -4,12 +4,12 @@ const $first = $("#firstName");
 
 
 $(window).on("load", function() {
-    $("form").html("")
+    $("form").html("");
 
     setTimeout(function() {
-        location.href = "/login"
-    }, 10000)
-})
+        location.href = "/login";
+    }, 10000);
+});
 
 
 

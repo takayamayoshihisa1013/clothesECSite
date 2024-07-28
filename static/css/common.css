@@ -1,10 +1,573 @@
+@import url('https://fonts.googleapis.com/css2?family=Itim&display=swap');
+
 * {
     margin: 0;
     padding: 0;
 }
 
+body {
+    width: 100%;
+}
+
+
 a {
-    display: block;
     text-decoration: none;
     color: inherit;
+    display: block;
+}
+
+.img {
+    width: 100%;
+}
+
+.block {
+    display: block;
+}
+
+.nav_flex {
+    display: flex;
+}
+
+ul {
+    list-style: none;
+}
+
+
+
+
+header {
+    height: 22vh;
+    width: 100%;
+    background-color: #000;
+    position: fixed;
+    z-index: 1000;
+    transition: 0.6s;
+    top:0;
+    color: #ffff;
+}
+
+
+.header_flex {
+    display: flex;
+}
+
+header nav {
+    width: 40vw;
+    height: 100%;
+    /* line-height: 30vh; */
+}
+
+header .clothesSite {
+    margin-top: 6vh;
+}
+
+header .clothesSite ul {
+    width: 35vw;
+    display: flex;
+    margin: 0 auto;
+}
+
+header .clothesSite ul li {
+    width: 8.75vw;
+    text-align: center;
+    font-size: 3vmin;
+    height: 4vh;
+    /* border-left: 1px solid #ffff; */
+    position: relative;
+    transition: 0.4s;
+    line-height: 4vh;
+    font-family: 'Itim', cursive;
+}
+
+header .clothesSite ul li:nth-child(2),header .clothesSite ul li:nth-child(3),header .clothesSite ul li:nth-child(4) {
+    border-left: 2px solid rgba(105,105,105,0.65);
+}
+
+header .clothesSite ul li:hover {
+    background-color: rgba(105,105,105,0.65);
+}
+
+
+
+header .clothesSite form div {
+    margin: 4vh auto;
+    height: 4vh;
+    width: 30vw;
+    display: flex;
+}
+
+
+header .clothesSite div .header_search {
+    width: 25vw;
+    border-radius: 50px;
+    display: block;
+    text-indent: 2%;
+    font-size: 2vmin;
+    /* margin: 0 auto; */
+}
+
+header .clothesSite div .header_button  {
+    width: 5vw;
+    display: block;
+    border-radius: 50px;
+    background-color: #ffff;
+    color: #000;
+    border: 2px solid #ffff;
+    font-size: 3vmin;
+}
+
+header .clothesSite div .header_button i {
+    color: #000;
+}
+
+/* header .address {
+    width: 30vw;
+    margin: 0 auto;
+    font-size: 14px;
+    color: #ffd700;
+    opacity: 1;
+    transition: 0.4s;
+}
+
+header .address_title {
+    text-align: center;
+} */
+
+
+.header_img {
+    
+    height: 17vh;
+    width: 20vw;
+    transition: 0.4s;
+
+}
+
+.header_img img {
+    display: block;
+    margin: 2.5vh auto;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    transition: 0.4s;
+}
+
+/* header .account_and_sub {
+    height: 25vh;
+} */
+
+header .account_and_sub ul{
+    
+    width: 25vw;
+    margin: 0 auto;
+}
+
+header .account_and_sub .login {
+    height: 5vh;
+    margin: 5vh auto 2vh;
+    text-align: center;
+    display: flex;
+    line-height: 5vh;
+}
+
+header .account_and_sub .login .logout {
+    border: 2px solid #ffff;
+    width: 10vw;
+    margin: 0 1.25vw;
+    font-size: 3vmin;
+    transition: 0.6s;
+    font-family: 'Itim', cursive;
+    line-height: calc(5vh - 2px);
+}
+
+header .account_and_sub .login .logout:hover {
+    background-color: rgba(105,105,105,0.65);
+}
+
+
+header .account_and_sub .login .username {
+    width: 12.5vw;
+}
+
+.account_and_sub .account {
+    width: 25vw;
+    text-align: center;
+    font-size: 2.2vmin;
+    color: #ffd700;
+    
+}
+
+.account_and_sub .account div {
+    margin: 2vh 0;
+    display: flex;
+    height: 3vh;
+    
+}
+
+
+
+.account_and_sub .account div .list1,.account_and_sub .account div .list2 {
+    width: 10vw;
+    margin: 0 1.25vw;
+    position: relative;
+    transition: 0.4s;
+    height: 4vh;
+    line-height: 4vh;
+}
+
+
+
+.account_and_sub .account div .list1:hover, .account_and_sub .account div .list2:hover {
+    background-color: #696969;
+    /* opacity: 0.6; */
+}
+
+
+.account_and_sub .sub {
+    width: 25vw;
+    display: flex;
+    
+    margin: 4vh auto 0;
+    height: 5vh;
+    transition: 0.6s;
+}
+
+.account_and_sub .sub li {
+    width: 6.25vw;
+    text-align: center;
+    height: 5vh;
+}
+
+.account_and_sub i {
+    transition: 0.4s;
+    font-size: 4vmin;
+}
+
+.account_and_sub i:hover {
+    font-size: 6vmin;
+}
+
+.account_and_sub li:nth-child(1) i:hover{
+    background: -webkit-linear-gradient(0deg, #4C64D3, #CF2E92,#F26939,#FFDD83);/*//背景色にグラデーションを指定*/
+    -webkit-background-clip: text;/*//テキストでくり抜く*/
+    -webkit-text-fill-color: transparent;/*//くり抜いた部分は背景を表示*/
+}
+
+
+
+.account_and_sub li:nth-child(2) i:hover{
+    color: #1DA1F2;
+}
+
+
+
+.account_and_sub li:nth-child(3) i:hover{
+
+    color: #00B900;
+
+}
+
+
+
+
+
+
+
+.h {
+    position: relative;
+    text-decoration: none; /* アンダーラインを非表示にするために必要 */
+}
+
+.h::after {
+    position: absolute;
+    left: 0;
+    content: '';
+    width: 100%;
+    height: 2px;
+    background: #000000;
+    bottom: -1px;
+    transform: scale(0, 1);
+    transform-origin: center top; /*変形（アンダーラインの伸長）の原点がaタグ（各メニュー）の右端*/
+    transition: transform 0.3s;   /*変形の時間*/
+    }
+    
+.h:hover::after {
+    transform: scale(1, 1); /*ホバー後、x軸方向に1（相対値）伸長*/
+}
+
+
+
+
+
+.bread {
+    height: 5vh;
+    background-color: #f0fff0;
+    position: fixed;
+    top: 15vh;
+    width: 100%;
+    z-index: 20;
+    transition: 1s;
+}
+
+
+/* .slider1 {
+    background-color: #000;
+} */
+
+
+
+
+
+.nav_flex div {
+    line-height: 16vh;
+    transition: 1s;
+}
+
+
+.fontawsame {
+    display: block;
+    font-size: 4vh;
+    text-align: center;
+    width: 6vh;
+    height: 5vh;
+    padding-top: 1vh;
+    cursor: pointer;
+    border: 3px solid;
+    border-radius: 2vw;
+    transition: 0.6s;
+}
+
+
+.fontawsame:hover {
+    opacity: 0.8;
+    transform: scale(1.2, 1.2);
+}
+
+
+.slider1 img {
+    opacity: 0.8;
+    transition: 0.6s;
+}
+
+.slider1 img:hover {
+    opacity: 1;
+    
+}
+
+
+
+.nav_flex div {
+    line-height: 16vh;
+    transition: 1s;
+}
+
+
+
+.fontawsame {
+    display: block;
+    font-size: 4vh;
+    text-align: center;
+    width: 6vh;
+    height: 5vh;
+    padding-top: 1vh;
+    cursor: pointer;
+    border: 3px solid;
+    border-radius: 2vw;
+    transition: 0.6s;
+}
+
+
+.fontawsame:hover {
+    opacity: 0.8;
+    transform: scale(1.2, 1.2);
+}
+
+
+/* 出現 */
+.active {
+    /* display: block; */
+    margin-top: 0;
+    opacity: 1;
+    /* transition: 1s; */
+}
+
+
+
+.account_detail {
+    position: fixed;
+    left: 70vw;
+    background-color: #d3d3d3;
+    width: 30vw;
+    height: 20vh;
+    top: 15vh;
+    transition: 1s;
+    opacity: 0;
+    z-index: 30;
+    background-image: url(./../images/headerIMG/headerIMG/white_00012.jpg);
+}
+
+.account_detail nav {
+    width: 25vw;
+    margin: 0 auto;
+    height: 16vh;
+    padding-top: 2vh;
+    display: flex;
+    justify-content: space-around;
+}
+
+.account_detail nav ul {
+    height: 16vh;
+    list-style: none;
+}
+
+.account_detail nav ul li {
+    height: 25%;
+    line-height: 4vh;
+    width:  10vw;
+}
+
+.account_detail nav ul li a {
+    margin-left: 10px;
+    
+}
+
+.account_detail nav ul li:hover {
+    background-color: #d3d3d3;    
+}
+
+
+
+
+/* .account_detail nav ul li a {
+    
+} */
+
+.show {
+    /* 表示されているかどうかのクラス */
+    opacity: 1;
+    transition: 1s;
+}
+
+
+
+
+
+
+footer {
+    width: 100%;
+    height: 50vh;
+    background-color: black;
+    color: white;
+}
+
+.footer-box {
+    width: 1200px;
+    margin: 0 auto;
+    padding: 30px 0 0 0;
+    display: flex;
+    justify-content: space-between;
+    font-size: 15px;
+}
+
+.toppage img {
+    width: 300px;
+    /* transition: 0.3s ease; */
+}
+/* 
+.toppage img:hover {
+    opacity: 0.6;
+    content: url('static/images/logo/ラーの翼神竜.png');
+} */
+
+.category h2 {
+    /* width: 200px; */
+    margin-bottom: 10px;
+    border-bottom: solid 3px white;
+    /* border-left: solid 3px white; */
+}
+
+.category-top {
+    display: flex;
+}
+
+.category-box {
+    margin: 0 50px 0 0;
+}
+
+
+
+
+.category-box .footer_button {
+    
+    margin-bottom: 10px;
+    transition: 0.3s ease;
+    border: none;
+    background-color: #000;
+    color: #ffff;
+    font-size: 2.8vmin;
+}
+
+.category-box .footer_button:hover {
+    opacity: 0.5;
+}
+
+.snsbox {
+    width: 250px;
+}
+
+.snsbox h2{
+    margin-bottom: 10px;
+    border-bottom: solid 3px white;
+}
+
+.footer-sns {
+    display: flex;
+}
+
+.footer-sns i {
+    font-size: 40px;
+    margin-right: 30px;
+    transition: 0.3s ease;
+}
+
+.footer-sns i:hover {
+    opacity: 0.6;
+}
+
+
+small {
+    text-align: center;
+    display: block;
+    margin: 0 auto;
+}
+
+
+
+
+.flex {
+    display: flex;
+}
+
+
+
+
+.submit {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+
+    
+    /* ボタンタフの設定を消していく */
+    background-color: transparent;
+    border: none; 
+    cursor: pointer;
+    padding: 0;
+    outline: none;
+    appearance: none;
+}
+
+
+article {
+    padding-top: 35vh;
 }

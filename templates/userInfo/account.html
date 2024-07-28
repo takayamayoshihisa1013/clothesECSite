@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="static/css/common.css">
+    <link rel="stylesheet" href="static/css/account.css">
+    <link href="https://fonts.googleapis.com/css?family=Alegreya+Sans+SC:300" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <title>Document</title>
+</head>
+<body>
+    <header>
+        <div class="header_flex">
+            <nav class="clothesSite">
+                <form action="/result">
+                    <ul>
+                        <li><a href="/">Home</a></li>
+                        <li>All Items<button class="submit" type="submit"></button></li>
+                        <li>tops<button class="submit" type="submit"></button></li>
+                        <li>Popular<button class="submit" type="submit"></button></li>
+                    </ul>
+                
+                    <div>
+                        <input type="search" class="header_search">
+                        <button type="submit" class="header_button">
+                            <i class="fas fa-search"></i>
+                        </button>
+                    </div>
+                </form>
+                
+            </nav>
+            
+            <div class="header_img">
+                <img src="static/images/logo/logo_black.PNG" alt="" class="img">
+            </div>
+            <nav class="account_and_sub">
+                <ul class="login">
+                    <li class="logout "><a href="/login">{{ log }}</a></li>
+                    <li class="username list2">{{ acount | safe }}</li>
+                    <!-- <li><a a href="/clothesList" class="h">clothes</a></li> -->
+                </ul>
+                {{ account_detail | safe }}
+            </nav>
+        </div>
+    </header>
+    <article>
+        <section class="title">
+            <div>
+                <h3>カート</h3>
+            </div>
+            <div>
+                <h3>お気に入り商品</h3>
+            </div>
+            <div>
+                <h3>売上情報</h3>
+            </div>
+            <div>
+                <h3>商品登録</h3>
+            </div>
+        </section>
+        <section id="">
+
+        </section>
+        <section id="favorite">
+            <div class="row">
+                <div class="border">
+                    <div class="border_img">
+                        <img src="static/images/clothes/jacket/314H4bJj7vL._AC_UL320_.jpg
+                        " alt="">
+                    </div>
+                    <div>
+                        <h3></h3>
+                    </div>
+                </div>
+                <div class="border">
+                    <div class="border_img">
+                        <img src="static/images/clothes/jacket/314H4bJj7vL._AC_UL320_.jpg
+                        " alt="">
+                    </div>
+                    <div>
+                        <h3></h3>
+                    </div>
+                </div>
+                <div class="border">
+                    <div class="border_img">
+                        <img src="static/images/clothes/jacket/314H4bJj7vL._AC_UL320_.jpg
+                        " alt="">
+                    </div>
+                    <div>
+                        <h3></h3>
+                    </div>
+                </div>
+                <div class="border">
+                    <div class="border_img">
+                        <img src="static/images/clothes/jacket/314H4bJj7vL._AC_UL320_.jpg
+                        " alt="">
+                    </div>
+                    <div>
+                        <h3></h3>
+                    </div>
+                    
+                </div>
+                <div class="border">
+                    <div class="border_img">
+                        <img src="static/images/clothes/jacket/314H4bJj7vL._AC_UL320_.jpg
+                        " alt="">
+                    </div>
+                    <div>
+                        <h3></h3>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="">
+
+        </section>
+        <section id="">
+
+        </section>
+        <section>
+
+        </section>
+    </article>
+    {{ footer_tag | safe }}
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="static/js/accountImfo.js"></script>
+</body>
+</html>

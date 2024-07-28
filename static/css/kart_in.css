@@ -1,0 +1,145 @@
+body {
+    /* background-color: #f5f5f5; */
+}
+
+article {
+    width: 90%;
+    margin: 0 auto;
+}
+
+article .thanksText{
+    height: 30vh;
+    width: 100%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-around;
+}
+
+
+
+
+article .thanksText .img_div {
+    width: 20%;
+    height: 100%;
+    object-fit: cover;
+}
+
+article .thanksText .img_div img {
+    display: block;
+    height: 100%;
+    margin: 0 auto;
+    max-width: 100%;
+}
+
+article .thanksText .product_detail {
+    font-size: 15px;
+    width: 45%;
+    padding: 0 3vw;
+    background-color: #ffff;
+}
+
+article .thanksText .product_detail .price {
+    color: red;
+}
+
+article .thanksText .move_button {
+    width: 10%;
+    background-color: #ffff;
+
+}
+
+article .more .moreText {
+    height: 10vh;
+}
+
+article .more .moreText h3 {
+    text-align: center;
+    line-height: 10vh;
+    font-size: 20px;
+}
+
+
+section .slider8 ,section .slider11 {
+    width: 80vw;
+    margin: 0 auto;
+}
+
+section .slider8 .img_div ,
+section .slider11 .img_div {
+    width: 20%;
+    position: relative;
+    height: 30vh;
+}
+
+section .slider8 .img_div .img, section .slider11 .img_div .img {
+    display: block;
+    object-fit: contain;
+    max-width: 100%;
+    margin: 0 auto;
+    height: 100%;
+}
+
+
+
+
+.slick-arrow::before {
+    font-size: 40px!important;
+}
+
+.slick-next {
+    right: -50px!important;
+    opacity:1!important;
+    z-index: 10;
+}
+
+.slick-next::before {
+    color: #000!important;
+}
+
+.slick-prev {
+    left: -50px!important;
+    opacity:1!important;
+    z-index: 10;
+    /* bottom: 0!important; */
+}
+
+.slick-prev::before {
+    color: #000!important;
+}
+
+/* slickのドットの大きさ */
+.slick-dots li button:before{
+	font-size:10px!important;
+}
+/* slickのドットの高さ */
+.slick-dots{
+	bottom: -40px!important;
+    /* color: #f0fff0; */
+}
+
+.slick-dots li button:before {
+    color: #ffd700!important;
+}
+
+
+.submit {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    opacity: 0;
+    /* ボタンタフの設定を消していく */
+    /* background-color: transparent; */
+    background-color: #000;
+    border: none; 
+    cursor: pointer;
+    padding: 0;
+    outline: none;
+    appearance: none;
+    z-index: 1;
+    transition: 0.4s;
+}
+.submit:hover {
+    opacity: 0.3;
+}

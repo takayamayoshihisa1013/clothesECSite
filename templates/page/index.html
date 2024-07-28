@@ -1,0 +1,519 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="static/css/style.css">
+
+    <!-- slick -->
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.css">
+    <link rel="stylesheet" type="text/css"
+        href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick-theme.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+        integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="https://fonts.googleapis.com/css?family=Alegreya+Sans+SC:300" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Vollkorn" rel="stylesheet">
+    <title>SHEEPトップページ</title>
+</head>
+
+<body>
+    <header>
+        <div class="header_flex">
+            <nav class="clothesSite">
+                <form action="/result" method="get">
+                    <ul>
+                        <li><a href="/">Home</a></li>
+                        <li>All Items<button class="submit" type="submit" name="keyWord" value="productList"></button></li>
+                        <li>Popular<button class="submit" type="submit" name="keyWord" value="popular"></button></li>
+                        <li><a href="/inquiry">inquiry</a></li>
+                    </ul>
+                </form>
+                <form action="/result" method="get">
+                    <div>
+                        <input type="search" class="header_search" name="keyWord" placeholder="キーワードを入力">
+                        <button type="submit" class="header_button">
+                            <i class="fas fa-search"></i>
+                        </button>
+                    </div>
+                </form>
+                <div class="address">
+                    <a href="https://www.google.com/maps/place/%E3%82%B3%E3%82%AF%E3%83%BC%E3%83%B3%E3%82%BF%E3%83%AF%E3%83%BC/@35.6916786,139.6944136,17z/data=!3m2!4b1!5s0x60188cd697948c57:0x91396f1d50f81605!4m6!3m5!1s0x60188db4f3887ae7:0x3d4f3619214cc0ea!8m2!3d35.6916786!4d139.6969885!16s%2Fg%2F11lp_q4w8l?entry=ttu" target="_blank" rel="noopener noreferrer">
+                    <h3>東京都新宿区西新宿1-7-3 総合校舎コクーンタワー</h3>
+                    <h3>10:00～20:00（日・祝除く）</h3>
+                    <h3><i class="fas fa-phone-volume"></i> 03-3344-1010</h3></a>
+                </div>
+            </nav>
+            <!-- <div>
+                <form class="search_div" action="/result" method="get">
+                    <input type="text" class="search" class="block" name="search">
+                    <input type="submit" class="search_button" class="block">
+                </form>
+                <div class="button_div">
+                        
+                </div>
+            </div> -->
+            <div class="header_img">
+                {{ a | safe }}
+                <img src="static/images/logo/logo_black.PNG" alt="" class="img">
+                {{ a_last | safe }}
+            </div>
+            <nav class="account_and_sub">
+                <ul class="login">
+                    <li class="logout"><a href="/login">{{ log }}</a></li>
+                    <li class="username list2">{{ acount | safe }}</li>
+                    <!-- <li><a a href="/clothesList" class="h">clothes</a></li> -->
+                </ul>
+                {{ account_detail | safe }}
+                <ul class="sub">
+                    <li><a href=""><i class="fab fa-instagram"></i></a></li>
+                    <li><a href=""><i class="fab fa-twitter"></i></a></li>
+                    <li><a href=""><i class="fab fa-line"></i></a></li>
+                    <li><a href=""><i class="fab fa-tiktok"></i></a></li>
+                </ul>
+            </nav>
+        </div>
+
+    </header>
+    <!-- <div class="account_detail">
+        <nav>
+            <ul>
+                <li>{{ info | safe }}</li>
+                <li><form action="/login" name="account"><a href="javascript:account.submit()">{{ log | safe }}</a></form></li>
+                <li><a href="">カート</a></li>
+                <li><a href="">購入履歴</a></li>
+            </ul>
+            <ul>
+                <li class="name">{{ acount | safe }}</li>
+                <li></li>
+                <li></li>
+                <li></li>
+            </ul>
+        </nav>
+    </div> -->
+    <!-- <nav class="bread">
+        
+    </nav> -->
+    <article>
+        <!-- <section class="first_load">
+            <img src="" alt="">
+        </section> -->
+        <section class="one">
+            <form action="/product" method="get">
+                <!-- <div id = "soto">
+            <img class = "gazo" src = "././../static/images/ダウンロード.jpg"> 
+            <img class = "gazo" src = "././../static/images/ダウンロード.jpg">
+            <img class = "gazo" src = "././../static/images/ダウンロード.jpg">
+            <img class = "gazo" src = "././../static/images/ダウンロード.jpg">
+            <img class = "gazo" src = "././../static/images/ダウンロード.jpg">
+        </div> -->
+                <div class="slider1">
+                    <!-- <div class="s_img">
+                        <img src="./../../static/images/clothes/jacket/314H4bJj7vL._AC_UL320_.jpg" alt=""  class="div_img">
+                        <button type="submit" class="submit" name="submit1" value="safe"></button>
+                    </div> -->
+                    <!-- <div class="s_img">
+                        <img src="./../static/images/sample/2.jpg" alt=""  class="div_img">
+                    </div>
+                    <div class="s_img">
+                        <img src="./../static/images/sample/3.jpg" alt=""  class="div_img">
+                    </div>
+                    <div class="s_img">
+                        <img src="./../static/images/ダウンロード.jpg" alt=""  class="div_img">
+                    </div>
+                    <div class="s_img">
+                        <img src="./../static/images/ダウンロード.jpg" alt=""  class="div_img">
+                    </div> -->
+                    {{ slideClothesData | safe }}
+                    <!-- <div class="last s_img">
+                        <img src="./../../static/images/clothes/jacket/314H4bJj7vL._AC_UL320_.jpg" alt=""
+                            class="div_img">
+                    </div> -->
+                </div>
+            </form>
+        </section>
+        <section class="onePointTwoFive">
+            <div class="SiteConcept">
+                <div class="img_div1">
+                    <img src="static/images/indexTop/b661740a428ab476b9661579da8fdfad.jpg" alt="" id="SiteConceptImgLeft">
+                </div>
+                <div class="text">
+                    <p id="text1">スタイルを売って、スタイルを買い、</p>
+                    <p id="text2">トレンドをシェアし、個性を見つける。</p>
+                    <p id="text3">ファッションの旅が、ここから始まる。</p>
+                    <p id="text4">ファッションをあなたの手のひらに。</p>
+                </div>
+                <div class="img_div2">
+                    <img src="static/images/indexTop/1-1024x683.jpg" alt="" id="SiteConceptImgRight">
+                </div>
+            </div>
+            
+        </section>
+        <section class="onePointFive">
+            <div class="newsTitle">
+                <h2>News</h2>
+            </div>
+            <form action="/feature">
+                <div class="newsSlider">
+                    {{ new_slider | safe }}
+                    <!-- <div>
+                        <a href="">
+                            <div class="newsSlider_img">
+
+                                <img src="./../../static/images/indexNews/825634de6215560fe2b8b2bf68916a00.jpg" alt="">
+
+                            </div>
+                            <div class="news_detail">
+                                <h4>2023.11.30</h4>
+                                <p>やわらかな素材感やシルエットにこだわった、大人の女性の為のきれいめコレクション。</p>
+                            </div>
+                        </a>
+                    </div>
+                    <div>
+                        <a href="">
+                            <div class="newsSlider_img">
+
+                                <img src="./../../static/images/indexNews/AdobeStock_218541563-1024x683.jpeg" alt="">
+
+                            </div>
+                            <div class="news_detail">
+                                <h4>2023.11.30</h4>
+                                <p>「寒さを我慢しない服」大人のワークウェアを自由に楽しむ、beautiful people のコラボレーション第2弾が登場。</p>
+                            </div>
+                        </a>
+                    </div>
+                    <div>
+                        <a href="">
+                            <div class="newsSlider_img">
+
+                                <img src="./../../static/images/indexNews/kids.jpg" alt="">
+
+                            </div>
+                            <div class="news_detail">
+                                <h4>2023.11.30</h4>
+                                <p>そのあたたかさに驚く。本格的なあたたかさを、あなたらしい冬のスタイルを手軽な価格で。冬の新定番、ヒートパデッドアウターがKIDSから登場</p>
+                            </div>
+                        </a>
+                    </div>
+                    <div>
+                        <a href="">
+                            <div class="newsSlider_img">
+
+                                <img src="./../../static/images/indexNews/sale.jpg" alt="">
+
+                            </div>
+                            <div class="news_detail">
+                                <h4>2023.11.30</h4>
+                                <p>値下げ商品をご紹介！</p>
+                                <p>売り切れ御免、早い者勝ち!値下げ商品をご紹介。商品はこちら。</p>
+                            </div>
+                        </a>
+                    </div>
+                    <div>
+                        <a href="">
+                            <div class="newsSlider_img">
+
+                                <img src="./../../static/images/indexNews/tasclapimage_2661_wd.jpg" alt="">
+
+                            </div>
+                            <div class="news_detail">
+                                <h4>2023.11.30</h4>
+                                <p>本格的な機能を兼ね備えたあたたかなアウターをご紹介。</p>
+                            </div>
+                        </a>
+                    </div> -->
+                </div>
+            </form>
+        </section>
+        <section class="two">
+            <div class="Title">
+                <h2>what to buy?</h2>
+            </div>
+            <div class="sex_select">
+                <ul>
+                    <li id="all">All</li>
+                    <li id="men">Men</li>
+                    <li id="woman">Women</li>
+                    <li id="kid">Kid</li>
+                    <li class="back"></li>
+                </ul>
+            </div>
+            <nav class="clothes_select" >
+                <form action="/result" method="get" id="allClothes">
+                    
+                    <div class="row">
+                        <div class="frame">
+                            <div class="img">
+                                <img src="static/images/clothesSelect/jacket.avif" alt="">
+                            </div>
+                            <div class="title">
+                                <h2>Jacket</h2>
+                            </div>
+                            <button class="submit" name="keyWord" value="jacket"></button>
+                        </div>
+                        <div class="frame">
+                            <div class="img">
+                                <img src="static/images/clothesSelect/t-shirt.avif" alt="">
+                            </div>
+                            <div class="title">
+                                <h2>T-Shirt</h2>
+                            </div>
+                            <button class="submit" name="keyWord" value="t-shirt"></button>
+                        </div>
+                        <div class="frame">
+                            <div class="img">
+                                <img src="static/images/clothesSelect/shirt.avif" alt="">
+                            </div>
+                            <div class="title">
+                                <h2>Shirt</h2>
+                            </div>
+                            <button class="submit" name="keyWord" value="shirt"></button>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="frame">
+                            <div class="img">
+                                <img src="static/images/clothesSelect/pants.avif" alt="">
+                            </div>
+                            <div class="title">
+                                <h2>Pants</h2>
+                            </div>
+                            <button class="submit" name="keyWord" value="pants"></button>
+                        </div>
+                        <div class="frame">
+                            <div class="img">
+                                <img src="static/images/clothesSelect/skirt.avif" alt="">
+                            </div>
+                            <div class="title">
+                                <h2>skirt</h2>
+                            </div>
+                            <button class="submit" name="keyWord" value="skirt"></button>
+                        </div>
+                        <div class="frame">
+                            <div class="img">
+                                <img src="static/images/clothesSelect/underwear.avif" alt="">
+                            </div>
+                            <div class="title">
+                                <h2>Underwear</h2>
+                            </div>
+                            <button class="submit" name="keyWord" value="underwear"></button>
+                        </div>
+                    </div>
+                </form>
+                <form action="/result" id="mensClothes">
+                    <div class="row">
+                        <div class="frame">
+                            <div class="img">
+                                <img src="static/images/clothesSelect/jacket.avif" alt="">
+                            </div>
+                            <div class="title">
+                                <h2>Jacket</h2>
+                            </div>
+                            <button class="submit" name="keyWord" value="jacket men"></button>
+                        </div>
+                        <div class="frame">
+                            <div class="img">
+                                <img src="static/images/clothesSelect/t-shirt.avif" alt="">
+                            </div>
+                            <div class="title">
+                                <h2>T-Shirt</h2>
+                            </div>
+                            <button class="submit" name="keyWord" value="t-shirt men"></button>
+                        </div>
+                        <div class="frame">
+                            <div class="img">
+                                <img src="static/images/clothesSelect/shirt.avif" alt="">
+                            </div>
+                            <div class="title">
+                                <h2>Shirt</h2>
+                            </div>
+                            <button class="submit" name="keyWord" value="shirt men"></button>
+                        </div>
+                    </div>
+                    <div class="row " >
+                        <div class="frame">
+                            <div class="img">
+                                <img src="static/images/clothesSelect/pants.avif" alt="">
+                            </div>
+                            <div class="title">
+                                <h2>Pants</h2>
+                            </div>
+                            <button class="submit" name="keyWord" value="pants men"></button>
+                        </div>
+                        <div class="frame">
+                            <div class="img">
+                                <img src="static/images/clothesSelect/underwear.avif" alt="">
+                            </div>
+                            <div class="title">
+                                <h2>Underwear</h2>
+                            </div>
+                            <button class="submit" name="keyWord" value="underwear men></button>
+                        </div>
+                        <div class="frame">
+                            <div class="img">
+                                <img src="" alt="">
+                            </div>
+                            <div class="title">
+                                <h2></h2>
+                            </div>
+                            
+                        </div>
+                    </div>
+                </form>
+                <form action="/result" id="ladiesClothes">
+                    <div class="row">
+                        <div class="frame">
+                            <div class="img">
+                                <img src="static/images/clothesSelect/jacket.avif" alt="">
+                            </div>
+                            <div class="title">
+                                <h2>Jacket</h2>
+                            </div>
+                            <button class="submit" name="keyWord" value="jacket woman"></button>
+                        </div>
+                        <div class="frame">
+                            <div class="img">
+                                <img src="static/images/clothesSelect/t-shirt.avif" alt="">
+                            </div>
+                            <div class="title">
+                                <h2>T-Shirt</h2>
+                            </div>
+                            <button class="submit" name="keyWord" value="t-shirt woman"></button>
+                        </div>
+                        <div class="frame">
+                            <div class="img">
+                                <img src="static/images/clothesSelect/shirt.avif" alt="">
+                            </div>
+                            <div class="title">
+                                <h2>Shirt</h2>
+                            </div>
+                            <button class="submit" name="keyWord" value="shirt woman"></button>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="frame">
+                            <div class="img">
+                                <img src="static/images/clothesSelect/pants.avif" alt="">
+                            </div>
+                            <div class="title">
+                                <h2>Pants</h2>
+                            </div>
+                            <button class="submit" name="keyWord" value="pants woman"></button>
+                        </div>
+                        <div class="frame">
+                            <div class="img">
+                                <img src="static/images/clothesSelect/skirt.avif" alt="">
+                            </div>
+                            <div class="title">
+                                <h2>skirt</h2>
+                            </div>
+                            <button class="submit" name="keyWord" value="skirt woman"></button>
+                        </div>
+                        <div class="frame">
+                            <div class="img">
+                                <img src="static/images/clothesSelect/underwear_l.avif" alt="">
+                            </div>
+                            <div class="title">
+                                <h2>Underwear</h2>
+                            </div>
+                            <button class="submit" name="keyWord" value="underwear woman"></button>
+                        </div>
+                    </div>
+                </form>
+                <form action="/result" id="kidsClothes">
+                    <div class="row">
+                        <div class="frame">
+                            <div class="img">
+                                <img src="static/images/clothesSelect/jacket.avif" alt="">
+                            </div>
+                            <div class="title">
+                                <h2>Jacket</h2>
+                            </div>
+                            <button class="submit" name="keyWord" value="jacket kids"></button>
+                        </div>
+                        <div class="frame">
+                            <div class="img">
+                                <img src="static/images/clothesSelect/t-shirt.avif" alt="">
+                            </div>
+                            <div class="title">
+                                <h2>T-Shirt</h2>
+                            </div>
+                            <button class="submit" name="keyWord" value="t-shirt kids"></button>
+                        </div>
+                        <div class="frame">
+                            <div class="img">
+                                <img src="static/images/clothesSelect/shirt.avif" alt="">
+                            </div>
+                            <div class="title">
+                                <h2>Shirt</h2>
+                            </div>
+                            <button class="submit" name="keyWord" value="shirt woman"></button>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="frame">
+                            <div class="img">
+                                <img src="static/images/clothesSelect/pants.avif" alt="">
+                            </div>
+                            <div class="title">
+                                <h2>Pants</h2>
+                            </div>
+                            <button class="submit" name="keyWord" value="pants kids"></button>
+                        </div>
+                        <div class="frame">
+                            <div class="img">
+                                <img src="static/images/clothesSelect/skirt.avif" alt="">
+                            </div>
+                            <div class="title">
+                                <h2>skirt</h2>
+                            </div>
+                            <button class="submit" name="keyWord" value="skirt kids"></button>
+                        </div>
+                        <div class="frame">
+                            <div class="img">
+                                <img src="static/images/clothesSelect/underwear.avif" alt="">
+                            </div>
+                            <div class="title">
+                                <h2>Underwear</h2>
+                            </div>
+                            <button class="submit" name="keyWord" value="underwear kids"></button>
+                        </div>
+                    </div>
+                </form>
+            </nav>
+            
+        </section>
+        <section class="three">
+            <form action="/product">
+                <div class="Title">
+                    <h2>New Products</h2>
+                </div>
+                <div class="new_product">
+                    {{ new_product_tag | safe }}
+                    <div class="product">
+                        {{ product | safe }}
+                        
+                    </div>
+                </div>
+            </form>
+        </section>
+    </article>
+    {{ footer_tag | safe }}
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js"></script>
+    <script src="static/js/slick.js"></script>
+    <script src="static/js/scroll.js"></script>
+    <script src="static/js/script.js"></script>
+    <script>
+        $(function() {
+          $('html,body').animate({
+            scrollTop: 0
+          });
+        });
+    
+      </script>
+    
+</body>
+
+</html>

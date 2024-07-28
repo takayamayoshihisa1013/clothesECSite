@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./../../static/css/common.css">
+    <link href="https://fonts.googleapis.com/css?family=Alegreya+Sans+SC:300" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- ここまでは全ページ共通 -->
+
+
+
+
+     <!-- url
+        /koike
+        /haruyama
+        /takeuti
+        /huzita
+        で開けます
+    -->
+    
+    <link rel="stylesheet" href="./../../static/css/  cssファイルの名前を決めてください。フォルダはstaticフォルダの中に各々に入っています  ">
+    <title>Document</title>
+</head>
+<body>
+    <header>
+        <div class="header_flex">
+            <nav class="clothesSite">
+                <form action="/result" method="get">
+                    <ul>
+                        <li><a href="/">Home</a></li>
+                        <li>ProductList<button class="submit" type="submit" name="keyWord" value="productList"></button></li>
+                        <li>Popular<button class="submit" type="submit" name="keyWord" value="popular"></button></li>
+                        <li><a href="./">inquiry</a></li>
+                    </ul>
+                </form>
+                <form action="/result" method="get">
+                    <div>
+                        <input type="search" class="header_search" name="keyWord" placeholder="キーワードを入力">
+                        <button type="submit" class="header_button">
+                            <i class="fas fa-search"></i>
+                        </button>
+                    </div>
+                </form>
+                
+            </nav>
+            <div class="header_img">
+                <img src="./../../static/images/logo/logo_black.PNG" alt="" class="img">
+            </div>
+            <nav class="account_and_sub">
+                <ul class="login">
+                    <li class="logout "><a href="/login">{{ log }}</a></li>
+                    <li class="username list2">{{ acount | safe }}</li>
+                    <!-- <li><a a href="/clothesList" class="h">clothes</a></li> -->
+                </ul>
+                {{ account_detail | safe }}
+                
+            </nav>
+        </div>
+        
+    </header>
+
+<!-- 商品の画像、値段、商品の名前（商品の名前が長すぎたら一定の所で...にする）、
+        時間（登録した時間（今はただ時間を出せればいい））、
+        条件による絞り込み が表示されるサイトを作る、
+        デザインは任せます。 -->
+
+</body>
+<script src="./../../static/js/  jsファイルの名前を変えてください。jsファイルはstaticフォルダの中に各々入っています  "></script>
+</html>

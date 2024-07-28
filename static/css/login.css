@@ -1,0 +1,86 @@
+body {
+    background-image: url(./../images/headerIMG/headerIMG/black_00012.jpg);
+    
+}
+
+article {
+    width: 40vw;
+    margin: 14vh auto;
+    border: 1px solid;
+    padding: 1vh 1vw;
+    background-color: #FFFF;
+    background-image: url(./../images/headerIMG/headerIMG/white_00012.jpg);
+    border-radius: 3%;
+}
+
+.not_miss {
+    height: 59vh;
+}
+
+.miss {
+    height: 65vh;
+}
+
+h1 {
+    text-align: center;
+    padding: 3vh 0;
+    font-size: 4.5vmin;
+}
+
+form {
+    width: 80%;
+    margin: 0 auto;
+    /* padding-left: 20px; */
+}
+
+form h2 {
+    /* margin-left: -20px; */
+    padding: 2vh 0;
+    font-size: 2.8vmin;
+}
+
+article form .text {
+    height: 3vh;
+    width: 100%;
+    font-size: 2vmin;
+}
+
+article form h3 {
+    color: red;
+    font-size: 15px;
+}
+
+
+article form .button {
+    background-color: #ffff;
+    color: #000;
+    /* border-radius:50px; */
+    transition: 0.6s;
+    font-size: 2vmin;
+}
+
+.button {
+    display: block;
+    margin: 3vh auto;
+    width: 10vh;
+    background-image: url();
+    height: 4vh;
+}
+
+article a .button{
+    display: block;
+    width: 20vw;
+    /* margin-left: 30px; */
+    background-color: #ffff;
+    color: #000;
+    transition: 0.6s;
+    border: 1px solid #000;
+    font-size: 2vmin;
+}
+
+.button:hover {
+    background-color: #000;
+    color: #ffff;
+    border-radius: 50px;
+}
+
